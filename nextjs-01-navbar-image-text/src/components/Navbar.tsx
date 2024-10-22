@@ -32,7 +32,7 @@ const Navbar = () => {
   const isActive = (path: string) => path === usePath;
 
   /* Menu Toggle Setting*/
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
   console.log(menuOpen);
 
   /* Menu Setting while Toggling */
