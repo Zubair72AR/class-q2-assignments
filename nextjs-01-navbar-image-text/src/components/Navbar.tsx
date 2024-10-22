@@ -27,39 +27,90 @@ const navigation: Navigation[] = [
 ];
 
 const Navbar = () => {
-  {
-    /* Setup for Active Link */
-  }
+  /* Setup for Active Link */
   const usePath = usePathname();
   const isActive = (path: string) => path === usePath;
 
   /* Menu Toggle */
   const [menuOpen, setMenuOpen] = useState(false);
+  console.log(menuOpen);
 
+  /* Menu Setting while Toggling */
   function responsiveMenu() {
     let menuClass = [];
     if (menuOpen) {
       menuClass = [
+        "hidden",
+        "absolute",
         "top-16",
         "left-0",
         "p-12",
-        "gap-10",
-        "absolute",
-        "bg-[#080808]",
         "w-full",
-        "md:hidden",
+        "h-60",
+        "md:h-auto",
+        "justify-center",
+        "items-center",
+        "md:gap-4",
+        "md:flex",
+        "md:relative",
+        "md:top-0",
+        "md:p-0",
+        "md:bg-none",
       ];
     } else {
       menuClass = [
-        "hidden",
-        "md:flex",
+        "block",
+        "absolute",
+        "top-16",
+        "left-0",
+        "p-12",
+        "w-full",
+        "h-60",
+        "md:h-auto",
+        "bg-[#080808]",
         "justify-center",
         "items-center",
-        "gap-5",
-        "py-6",
+        "md:gap-4",
+        "md:flex",
+        "md:relative",
+        "md:top-0",
+        "md:p-0",
+        "md:bg-none",
       ];
     }
     return menuClass.join(" ");
+  }
+
+  /* Social Media Icons */
+  function getIcon() {
+    let iconClass = [];
+    if (menuOpen) {
+      iconClass = [
+        "absolute",
+        "top-64",
+        "justify-center",
+        "items-center",
+        "text-white",
+        "gap-2",
+        "hidden",
+        "md:flex",
+        "md:relative",
+        "md:top-0",
+      ];
+    } else {
+      iconClass = [
+        "absolute",
+        "top-64",
+        "justify-center",
+        "items-center",
+        "text-white",
+        "gap-2",
+        "flex",
+        "md:relative",
+        "md:top-0",
+      ];
+    }
+    return iconClass.join(" ");
   }
 
   return (
@@ -67,9 +118,10 @@ const Navbar = () => {
       {/* Logo */}
       <Link
         href="/"
-        className="text-white flex justify-center items-center gap-2 text-3xl"
+        className="text-red-500 flex justify-center items-center gap-2 text-3xl"
       >
-        <IoLogoXing /> <h1 className="text-2xl font-medium">ZubairAR</h1>
+        <IoLogoXing />{" "}
+        <h1 className="text-2xl font-medium text-white">ZubairAR</h1>
       </Link>
 
       {/* Menu Links */}
@@ -91,7 +143,6 @@ const Navbar = () => {
       </ul>
 
       {/* Menu Icon */}
-
       <button
         className="flex justify-center items-center text-2xl text-white md:hidden"
         onClick={() => {
@@ -100,28 +151,29 @@ const Navbar = () => {
       >
         {menuOpen ? <HiMenuAlt3 /> : <RxCross2 />}
       </button>
-      <div className="hidden justify-center items-center text-white gap-2 md:flex">
+
+      <div className={getIcon()}>
         <Link
           href="https://www.facebook.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
         >
           <FaFacebookF />
         </Link>
         <Link
           href="https://www.youtube.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
         >
           <FaYoutube />
         </Link>
         <Link
           href="https://www.twitter.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
         >
           <FaTwitter />
         </Link>
         <Link
           href="https://www.linkedin.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
         >
           <FaLinkedinIn />
         </Link>

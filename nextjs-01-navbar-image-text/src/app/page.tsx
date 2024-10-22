@@ -1,9 +1,7 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div>
-      <h1>Hallow Home page</h1>
+    <div className="flex justify-center items-center h-full">
+      <h1 className="font-bold text-2xl">Hallow Home page</h1>
     </div>
   );
 }
