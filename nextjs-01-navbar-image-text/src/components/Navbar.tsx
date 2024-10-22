@@ -31,7 +31,7 @@ const Navbar = () => {
   const usePath = usePathname();
   const isActive = (path: string) => path === usePath;
 
-  /* Menu Toggle */
+  /* Menu Toggle Setting*/
   const [menuOpen, setMenuOpen] = useState(false);
   console.log(menuOpen);
 
