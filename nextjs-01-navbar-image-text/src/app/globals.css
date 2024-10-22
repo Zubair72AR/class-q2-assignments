@@ -2,16 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  height: calc(100vh - 88px);
-}
 .columnHover {
-  transition: all 2s ease-out;
+  transition: all 1s ease-out;
 }
 .columnHover:hover {
   scale: 1.15;
   rotate: 90deg;
+}
+
+.profile-image {
+  background-image: url("../../image/Porfolio\ Image.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1s ease-out;
+}
+
+.profile-image:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+  transform: scale(1.5);
+  border: 3px solid white;
 }
 /*
 :root {
