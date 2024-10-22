@@ -6,7 +6,7 @@ export default function Home() {
         <p className="my-2 text-[22px]">
           Lorem Ipsum is simply dummy text of <br />
           the printing and typesetting industry. <br />
-          Lorem Ipsum has been the industry's <br />
+          Lorem Ipsum has been the industrys <br />
           standard
         </p>
         <button className="text-[20px] bg-[#080808] px-6 py-2 text-white mt-4 hover:bg-red-600">
