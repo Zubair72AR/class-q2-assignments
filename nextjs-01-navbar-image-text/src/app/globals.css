@@ -4,9 +4,15 @@
 
 html,
 body {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 88px);
 }
-
+.columnHover {
+  transition: all 2s ease-out;
+}
+.columnHover:hover {
+  scale: 1.15;
+  rotate: 90deg;
+}
 /*
 :root {
   --background: #ffffff;

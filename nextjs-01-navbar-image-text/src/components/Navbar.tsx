@@ -114,11 +114,11 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-[#080808] flex justify-between items-center px-12 h-16">
+    <nav className="bg-[#080808] flex justify-between items-center px-12 h-20 sticky top-0">
       {/* Logo */}
       <Link
         href="/"
-        className="text-red-500 flex justify-center items-center gap-2 text-3xl"
+        className="text-red-600 flex justify-center items-center gap-2 text-3xl"
       >
         <IoLogoXing />{" "}
         <h1 className="text-2xl font-medium text-white">ZubairAR</h1>
@@ -155,25 +155,25 @@ const Navbar = () => {
       <div className={getIcon()}>
         <Link
           href="https://www.facebook.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
         >
           <FaFacebookF />
         </Link>
         <Link
           href="https://www.youtube.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
         >
           <FaYoutube />
         </Link>
         <Link
           href="https://www.twitter.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
         >
           <FaTwitter />
         </Link>
         <Link
           href="https://www.linkedin.com"
-          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-500 hover:text-white hover:scale-110 transition-all"
+          className="bg-[#1e1e1e] p-[4px] rounded-md hover:bg-red-600 hover:text-white hover:scale-110 transition-all"
         >
           <FaLinkedinIn />
         </Link>
