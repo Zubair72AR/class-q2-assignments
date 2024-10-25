@@ -7,7 +7,7 @@ export default function Para({
 }) {
   return (
     <>
-      <h1 className={`font-bold text-5xl ${color}`}>{para}</h1>
+      <h1 className={`text-lg my-6 ${color}`}>{para}</h1>
     </>
   );
 }
