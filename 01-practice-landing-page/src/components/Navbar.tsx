@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
+import vercel from "../../public/vercel.svg";
 
 export default function Navbar() {
   // Responsive Menu
