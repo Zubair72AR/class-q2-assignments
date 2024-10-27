@@ -5,8 +5,12 @@ export default function Home() {
   return (
     <div>
       <div className="grid grid-cols-19 grid-rows-11 gap-1 p-2">
-        <div className="col-span-full bg-gray-900 flex items-center justify-center text-white rounded-[3px] text-2xl text-center font-bold shadow-md">
-          Periodic Table
+        <div className="col-span-full bg-gray-900 flex flex-col items-center justify-center text-white rounded-[3px] shadow-md">
+          <p className="text-2xl font-bold">Periodic Table</p>
+          <span className="text-sm tracking-widest text-gray-500">
+            {" "}
+            (Using Grid Tailwind CSS)
+          </span>
         </div>
         <TableNumSetup
           classNa=" shadow-none border-none"
@@ -17,7 +21,7 @@ export default function Home() {
         <TableNumSetup
           classNa=""
           code="1"
-          name="Hydrogen & Alkali Metals"
+          name="Hydrogen and Alkali Metals"
           color="text-gray-600"
         />
         <TableNumSetup
