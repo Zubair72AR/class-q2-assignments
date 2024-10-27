@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import figma_logo from "../../public/figma_logo.svg";
 import { usePathname } from "next/navigation";
@@ -122,43 +123,44 @@ export default function Navbar() {
         <Image src={figma_logo} alt="Figma Logo" className="w-7" />
         <h1 className="font-bold text-3xl text-white">Figma</h1>
       </div>
+      <div className="flex justify-between item-center gap-16">
+        {/* Menu Links flex justify-center items-center gap-4 absolute top-[72px] left-0 p-12 pb-32 bg-[#222222] w-full*/}
+        <ul className={handleMenu()}>
+          {navLink.map((nav) => {
+            return (
+              <li key={nav.id}>
+                <Link
+                  href={nav.path}
+                  className={
+                    isActive(nav.path)
+                      ? "text-white"
+                      : "text-[#919191] hover:text-green-500"
+                  }
+                >
+                  {nav.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
-      {/* Menu Links flex justify-center items-center gap-4 absolute top-[72px] left-0 p-12 pb-32 bg-[#222222] w-full*/}
-      <ul className={handleMenu()}>
-        {navLink.map((nav) => {
-          return (
-            <li key={nav.id}>
-              <Link
-                href={nav.path}
-                className={
-                  isActive(nav.path)
-                    ? "text-white"
-                    : "text-[#919191] hover:text-green-500"
-                }
-              >
-                {nav.name}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-
-      {/* Button flex justify-center items-center gap-4 absolute top-[230px] left-0 p-12*/}
-      <div className={handleToggle()}>
-        <Button
-          text="Try Whitepace free"
-          mTop="mt-0"
-          mBottom="mb-0"
-          onClick={handleClick}
-        />
-        <Button
-          text="Login"
-          color="bg-green-500"
-          mTop="mt-0"
-          mBottom="mb-0"
-          yesNo="false"
-          onClick={handleClick}
-        />
+        {/* Button flex justify-center items-center gap-4 absolute top-[230px] left-0 p-12*/}
+        <div className={handleToggle()}>
+          <Button
+            text="Try Whitepace free"
+            mTop="mt-0"
+            mBottom="mb-0"
+            onClick={handleClick}
+          />
+          <Button
+            text="Login"
+            color="bg-green-500"
+            mTop="mt-0"
+            mBottom="mb-0"
+            yesNo="false"
+            onClick={handleClick}
+          />
+        </div>
       </div>
 
       {/* Responsive Menu Icon */}

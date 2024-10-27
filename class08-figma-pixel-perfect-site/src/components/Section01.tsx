@@ -1,3 +1,4 @@
+"use client";
 import Button from "../components/Button";
 import HeadingBr from "../components/HeadingBr";
 import Para from "../components/Para";
