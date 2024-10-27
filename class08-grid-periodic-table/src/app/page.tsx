@@ -4,7 +4,7 @@ import TableNumSetup from "@/components//TableNumSetup";
 export default function Home() {
   return (
     <div>
-      <div className="grid grid-cols-19 grid-rows-11 gap-[6px] p-2">
+      <div className="grid grid-cols-19 grid-rows-11 gap-1 p-2">
         <div className="col-span-full bg-gray-900 flex items-center justify-center text-white rounded-[3px] text-2xl text-center font-bold shadow-md">
           Periodic Table
         </div>
