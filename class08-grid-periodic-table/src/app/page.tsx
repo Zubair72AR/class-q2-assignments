@@ -616,7 +616,7 @@ export default function Home() {
           color="text-purple-600"
           bg="hover:bg-purple-600"
         />
-        <div className="flex justify-center items-center flex-col font-bold text-xs text-lime-500 border-2 rounded-[3px] bg-white border-lime-500 hover:text-white hover:bg-lime-500 hover:border-lime-400">
+        <div className="flex justify-center items-center flex-col font-bold text-xs text-white border-2 rounded-[3px] bg-lime-500 border-lime-600 hover:text-white hover:bg-lime-500 hover:border-lime-400 animate-pulse">
           <p>57 - 71</p>
         </div>
         <TableSetup
@@ -778,7 +778,7 @@ export default function Home() {
           color="text-purple-600"
           bg="hover:bg-purple-600"
         />
-        <div className="flex justify-center items-center flex-col font-bold text-xs text-red-600 border-2 rounded-[3px] bg-white border-red-600 hover:text-white hover:bg-red-600 hover:border-red-400">
+        <div className="flex justify-center items-center flex-col font-bold text-xs text-white border-2 rounded-[3px] bg-red-600 border-red-700  hover:bg-red-600 hover:border-red-400 animate-pulse">
           <p>89 - 103</p>
         </div>
         <TableSetup
