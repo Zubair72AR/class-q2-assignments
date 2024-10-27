@@ -1,47 +1,169 @@
 import TableSetup from "@/components/TableSetup";
+import TableNumSetup from "@/components//TableNumSetup";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-[20] grid-rows-10 gap-1">
-      <TableSetup
-        classNa="col-span-2 row-span-3"
-        name="Hydrogen"
-        no="1"
-        code="H"
-        value="1.0080"
-        color="-blue-500"
+    <div className="grid grid-cols-19 grid-rows-12 gap-1 p-2">
+      <div className="col-span-full bg-gray-800 flex items-center justify-center text-white rounded-[3px] text-2xl text-center font-bold shadow-md">
+        Periodic Table
+      </div>
+      <TableNumSetup
+        classNa="col-span-1 shadow-none border-none"
+        code="Group"
+        name=""
+        color="text-blue-400"
+        bg=""
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="1"
+        name="Hydrogen & Alkali Metals"
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="2"
+        name="Alkaline earth metals"
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="3"
+        name=""
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="4"
+        name=""
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="5"
+        name=""
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="6"
+        name=""
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="7"
+        name=""
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="8"
+        name=""
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="9"
+        name=""
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="10"
+        name=""
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="11"
+        name=""
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="12"
+        name=""
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="13"
+        name="Triels"
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="14"
+        name="Tetrels"
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="15"
+        name="Pnictogens"
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="16"
+        name="Chalcogens"
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="17"
+        name="Halogens"
+        color="text-gray-500"
+        bg="bg-gray-100"
+      />
+      <TableNumSetup
+        classNa="col-span-1"
+        code="18"
+        name="Noble gases"
+        color="text-gray-500"
+        bg="bg-white"
+      />
+      <TableNumSetup
+        classNa="col-span-1 shadow-none border-none"
+        code="Period"
+        name="1"
+        color="text-blue-400"
+        bg=""
       />
       <TableSetup
-        classNa="grid-span-2"
+        classNa="col-span-19 border-blue-300"
         name="Hydrogen"
         no="1"
         code="H"
         value="1.0080"
-        color="-green-500"
+        color="text-blue-700"
+        bg="hover:bg-blue-700"
       />
       <TableSetup
-        classNa="grid-span-2"
-        name="Hydrogen"
-        no="1"
-        code="H"
-        value="1.0080"
-        color="-orange-500"
-      />
-      <TableSetup
-        classNa="grid-span-2"
-        name="Hydrogen"
-        no="1"
-        code="H"
-        value="1.0080"
-        color="-red-500"
-      />
-      <TableSetup
-        classNa="grid-span-2"
-        name="Hydrogen"
-        no="1"
-        code="H"
-        value="1.0080"
-        color="-red-500"
+        classNa="col-span-1 col-start-[19]"
+        name="Helium"
+        no="2"
+        code="He"
+        value="4.0026"
+        color="text-green-500"
+        bg="hover:bg-green-500"
       />
     </div>
   );
