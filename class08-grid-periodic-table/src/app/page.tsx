@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <div>
       <div className="grid grid-cols-19 grid-rows-11 gap-1 p-2">
-        <div className="col-span-full bg-gray-900 flex flex-col items-center justify-center text-white rounded-[3px] shadow-md">
-          <p className="text-2xl font-bold">Periodic Table</p>
-          <span className="text-sm tracking-widest text-gray-500">
-            {" "}
-            (Using Grid Tailwind CSS)
-          </span>
+        <div className="col-span-full bg-gray-950 flex flex-col items-center justify-center rounded-[3px] shadow-md">
+          <p className="text-2xl font-bold text-white">Periodic Table</p>
+          <p className="text-sm tracking-widest text-gray-600">
+            Using Grid Tailwind CSS - by{" "}
+            <span className="font-bold text-gray-500">binJAN</span>
+          </p>
         </div>
         <TableNumSetup
           classNa=" shadow-none border-none"
