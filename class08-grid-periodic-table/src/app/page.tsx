@@ -13,140 +13,70 @@ export default function Home() {
           code="Group"
           name=""
           color="text-gray-600"
-          bg=""
         />
         <TableNumSetup
           classNa=""
           code="1"
           name="Hydrogen & Alkali Metals"
           color="text-gray-600"
-          bg="bg-gray-500"
         />
         <TableNumSetup
           classNa=""
           code="2"
           name="Alkaline earth metals"
           color="text-gray-600"
-          bg="bg-white"
         />
-        <TableNumSetup
-          classNa=""
-          code="3"
-          name=""
-          color="text-gray-600"
-          bg="bg-gray-500"
-        />
-        <TableNumSetup
-          classNa=""
-          code="4"
-          name=""
-          color="text-gray-600"
-          bg="bg-white"
-        />
-        <TableNumSetup
-          classNa=""
-          code="5"
-          name=""
-          color="text-gray-600"
-          bg="bg-gray-500"
-        />
-        <TableNumSetup
-          classNa=""
-          code="6"
-          name=""
-          color="text-gray-600"
-          bg="bg-white"
-        />
-        <TableNumSetup
-          classNa=""
-          code="7"
-          name=""
-          color="text-gray-600"
-          bg="bg-gray-500"
-        />
-        <TableNumSetup
-          classNa=""
-          code="8"
-          name=""
-          color="text-gray-600"
-          bg="bg-white"
-        />
-        <TableNumSetup
-          classNa=""
-          code="9"
-          name=""
-          color="text-gray-600"
-          bg="bg-gray-500"
-        />
-        <TableNumSetup
-          classNa=""
-          code="10"
-          name=""
-          color="text-gray-600"
-          bg="bg-white"
-        />
-        <TableNumSetup
-          classNa=""
-          code="11"
-          name=""
-          color="text-gray-600"
-          bg="bg-gray-500"
-        />
-        <TableNumSetup
-          classNa=""
-          code="12"
-          name=""
-          color="text-gray-600"
-          bg="bg-white"
-        />
+        <TableNumSetup classNa="" code="3" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="4" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="5" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="6" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="7" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="8" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="9" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="10" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="11" name="" color="text-gray-600" />
+        <TableNumSetup classNa="" code="12" name="" color="text-gray-600" />
         <TableNumSetup
           classNa=""
           code="13"
           name="Triels"
           color="text-gray-600"
-          bg="bg-gray-500"
         />
         <TableNumSetup
           classNa=""
           code="14"
           name="Tetrels"
           color="text-gray-600"
-          bg="bg-white"
         />
         <TableNumSetup
           classNa=""
           code="15"
           name="Pnictogens"
           color="text-gray-600"
-          bg="bg-gray-500"
         />
         <TableNumSetup
           classNa=""
           code="16"
           name="Chalcogens"
           color="text-gray-600"
-          bg="bg-white"
         />
         <TableNumSetup
           classNa=""
           code="17"
           name="Halogens"
           color="text-gray-600"
-          bg="bg-gray-500"
         />
         <TableNumSetup
           classNa=""
           code="18"
           name="Noble gases"
           color="text-gray-600"
-          bg="bg-white"
         />
         <TableNumSetup
           classNa=" shadow-none border-none"
           code="Period"
           name="1"
           color="text-gray-600"
-          bg=""
         />
         <TableSetup
           classNa="border-blue-700 hover:border-blue-500"
@@ -171,7 +101,6 @@ export default function Home() {
           code=""
           name="2"
           color="text-gray-600"
-          bg=""
         />
         <TableSetup
           classNa="border-pink-500 hover:border-pink-400"
@@ -250,7 +179,6 @@ export default function Home() {
           code=""
           name="3"
           color="text-gray-600"
-          bg=""
         />
         <TableSetup
           classNa="border-pink-500 hover:border-pink-400"
@@ -329,7 +257,6 @@ export default function Home() {
           code=""
           name="4"
           color="text-gray-600"
-          bg=""
         />
         <TableSetup
           classNa="border-pink-500 hover:border-pink-400"
@@ -498,7 +425,6 @@ export default function Home() {
           code=""
           name="5"
           color="text-gray-600"
-          bg=""
         />
         <TableSetup
           classNa="border-pink-500 hover:border-pink-400"
@@ -667,7 +593,6 @@ export default function Home() {
           code=""
           name="6"
           color="text-gray-600"
-          bg=""
         />
         <TableSetup
           classNa="border-pink-500 hover:border-pink-400"
@@ -830,7 +755,6 @@ export default function Home() {
           code=""
           name="7"
           color="text-gray-600"
-          bg=""
         />
         <TableSetup
           classNa="border-pink-500 hover:border-pink-400"
@@ -1263,43 +1187,43 @@ export default function Home() {
       </div>
       <div className="grid grid-cols-5 grid-rows-2 gap-3 text-sm text-white w-3/4 mx-auto my-12">
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-pink-500"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-pink-500"></span>
           <p>Alkali Metals</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-sky-500"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-sky-500"></span>
           <p>Transition Metals</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-green-600"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-green-600"></span>
           <p>SemiMetals</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-yellow-400"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-yellow-400"></span>
           <p>Halogen</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-lime-500"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-lime-500"></span>
           <p>Lanthanides</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-purple-600"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-purple-600"></span>
           <p>Alkaline Earth Metals</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-orange-400"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-orange-400"></span>
           <p>Basic Metals</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-blue-700"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-blue-700"></span>
           <p>Nonmetals</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-orange-600"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-orange-600"></span>
           <p>Noble Gases</p>
         </div>
         <div className="flex justify-start items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-red-600"></span>
+          <span className="w-5 h-5 rounded-sm animate-spin bg-red-600"></span>
           <p>Actinides</p>
         </div>
       </div>

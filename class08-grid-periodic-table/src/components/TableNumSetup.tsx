@@ -3,13 +3,11 @@ export default function TableNumSetup({
   code,
   name,
   color,
-  bg = "bg-white",
 }: {
   classNa?: string;
   code?: string;
   name?: string;
   color?: string;
-  bg?: string;
 }) {
   return (
     <div
