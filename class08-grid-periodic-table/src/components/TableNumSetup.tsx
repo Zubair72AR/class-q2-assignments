@@ -13,14 +13,12 @@ export default function TableNumSetup({
 }) {
   return (
     <div
-      className={`${classNa} flex flex-col items-center ${color} ${bg} text-center border-[1px] rounded-[3px] p-[2px] pt-2 shadow-md capitalize`}
+      className={`flex flex-col items-center ${color}  text-center border-2rounded-[3px] p-[2px] pt-2 shadow-sm capitalize overflow-hidden ${classNa}`}
     >
-      <h2 className={`text-[.8rem] leading-5 font-medium underline pb-2`}>
+      <h2 className={`text-[.8rem] leading-4 font-medium underline pb-2`}>
         {code}
       </h2>
-      <h3 className={`text-[.6rem] leading-[.8rem] h-[1.4rem] font-medium`}>
-        {name}
-      </h3>
+      <h3 className={`text-[.6rem] leading-[.8rem] font-medium`}>{name}</h3>
     </div>
   );
 }
