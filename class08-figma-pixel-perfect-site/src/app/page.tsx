@@ -1,3 +1,4 @@
+import Colors from "@/components/Colors";
 import Section01 from "@/components/Section01";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
         <hr className="mx-12 border-[1px] border-[#282828]" />
       </div>
       <Section01 />
+      <Colors />
     </div>
   );
 }
