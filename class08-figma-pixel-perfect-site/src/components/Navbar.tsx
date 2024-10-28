@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import figma_logo from "../../public/figma_logo.svg";
+import Logo_Icon from "../../public/Logo_Icon.svg";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Button from "../components/Button";
@@ -117,11 +117,17 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="flex justify-between items-center bg-[#043873] py-4 px-12">
+    <nav className="flex justify-between items-center bg-[#043873] py-2 md:py-4 px-4 2xl:px-56 xl:px-8 md:px-6">
       {/* Logo */}
-      <div className="flex justify-center items-center font-bold text-3xl gap-2">
-        <Image src={figma_logo} alt="Figma Logo" className="w-7" />
-        <h1 className="font-bold text-3xl text-white">Figma</h1>
+      <div className="flex justify-center items-center gap-2">
+        <Image
+          src={Logo_Icon}
+          alt="Logo Icon"
+          className="w-[26px] md:w-[37px]"
+        />
+        <h1 className="font-bold text-[24px] md:text-[28px] text-white">
+          whitepace
+        </h1>
       </div>
       <div className="flex justify-between item-center gap-16">
         {/* Menu Links flex justify-center items-center gap-4 absolute top-[72px] left-0 p-12 pb-32 bg-[#222222] w-full*/}
@@ -144,7 +150,7 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* Button flex justify-center items-center gap-4 absolute top-[230px] left-0 p-12*/}
+        {/* Button */}
         <div className={handleToggle()}>
           <button
             className="px-7 py-[10px] rounded-lg shadow-md font-medium text-[#043873] bg-[#FFE492]"
