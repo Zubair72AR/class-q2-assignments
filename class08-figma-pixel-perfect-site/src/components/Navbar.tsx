@@ -148,15 +148,12 @@ export default function Navbar() {
         <div className={handleToggle()}>
           <Button
             text="Try Whitepace free"
-            mTop="mt-0"
-            mBottom="mb-0"
+            btnClass="bg-red-500"
             onClick={handleClick}
           />
           <Button
             text="Login"
-            color="bg-green-500"
-            mTop="mt-0"
-            mBottom="mb-0"
+            btnClass="bg-green-500"
             yesNo="false"
             onClick={handleClick}
           />

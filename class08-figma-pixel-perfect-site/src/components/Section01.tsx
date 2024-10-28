@@ -24,9 +24,7 @@ export default function section01() {
         />
         <Button
           text="Try Whitepace free"
-          color="bg-red-500"
-          mTop="mt-0"
-          mBottom="mb-0"
+          btnClass="bg-red-500"
           onClick={handleClick}
         />
       </div>
