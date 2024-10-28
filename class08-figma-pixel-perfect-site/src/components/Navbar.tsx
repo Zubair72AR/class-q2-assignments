@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Button from "../components/Button";
 import { useState } from "react";
-import { HiMenuAlt3 } from "react-icons/hi";
+import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 
 export default function Navbar() {
@@ -20,28 +20,23 @@ export default function Navbar() {
   let navLink = [
     {
       id: 1,
-      path: "/",
-      name: "Home",
-    },
-    {
-      id: 2,
       path: "/products",
       name: "Products",
     },
     {
-      id: 3,
+      id: 2,
       path: "/solutions",
       name: "Solutions",
+    },
+    {
+      id: 3,
+      path: "/resources",
+      name: "Resources",
     },
     {
       id: 4,
       path: "/pricing",
       name: "Pricing",
-    },
-    {
-      id: 5,
-      path: "/resources",
-      name: "Resources",
     },
   ];
 
@@ -65,11 +60,14 @@ export default function Navbar() {
     } else {
       toggleClassName = [
         "flex",
+        "flex-col",
+        "md:flex-row",
         "justify-center",
-        "items-center",
+        "items-start",
+        "md:items-center",
         "gap-4",
         "absolute",
-        "top-[230px]",
+        "top-[170px]",
         "left-0",
         "p-12",
         "md:relative",
@@ -87,7 +85,7 @@ export default function Navbar() {
     if (menuOpen) {
       menuClassName = [
         "hidden",
-        "md:flex",
+        "lg:flex",
         "justify-center",
         "items-center",
         "gap-4",
@@ -98,19 +96,22 @@ export default function Navbar() {
         "block",
         "gap-4",
         "absolute",
-        "top-[72px]",
+        "top-[52px]",
+        "md:top-[72px]",
         "left-0",
         "p-12",
-        "pb-32",
+        "pb-40",
+        "md:pb-16",
         "w-full",
-        "bg-[#222222]",
-        "md:flex",
-        "md:justify-center",
-        "md:items-center",
-        "md:relative",
-        "md:top-[0px]",
-        "md:left-0",
-        "md:p-0",
+        "bg-[#043873]",
+        "lg:flex",
+        "lg:justify-center",
+        "lg:items-center",
+        "lg:relative",
+        "lg:top-[0px]",
+        "lg:left-0",
+        "lg:p-0",
+        "lg:bg-none",
       ];
     }
     return menuClassName.join(" ");
@@ -129,7 +130,7 @@ export default function Navbar() {
           whitepace
         </h1>
       </div>
-      <div className="flex justify-between item-center gap-16">
+      <div className="flex justify-between item-center md:gap-4 lg:gap-12">
         {/* Menu Links flex justify-center items-center gap-4 absolute top-[72px] left-0 p-12 pb-32 bg-[#222222] w-full*/}
         <ul className={handleMenu()}>
           {navLink.map((nav) => {
@@ -160,17 +161,16 @@ export default function Navbar() {
           </button>
           <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
         </div>
+        {/* Responsive Menu Icon */}
+        <button
+          className="text-[32px] text-white lg:hidden"
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+          }}
+        >
+          {menuOpen ? <FiMenu /> : <RxCross2 />}
+        </button>
       </div>
-
-      {/* Responsive Menu Icon */}
-      <button
-        className="text-2xl text-white md:hidden"
-        onClick={() => {
-          setMenuOpen(!menuOpen);
-        }}
-      >
-        {menuOpen ? <HiMenuAlt3 /> : <RxCross2 />}
-      </button>
     </nav>
   );
 }
