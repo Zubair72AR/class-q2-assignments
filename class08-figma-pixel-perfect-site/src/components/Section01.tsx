@@ -22,11 +22,7 @@ export default function section01() {
           para="Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks"
           color="text-white"
         />
-        <Button
-          text="Try Whitepace free"
-          btnClass="bg-red-500"
-          onClick={handleClick}
-        />
+        <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
       </div>
       <Image src={WebDevelop} alt="Web Image" className="w-[500px]" />
     </div>

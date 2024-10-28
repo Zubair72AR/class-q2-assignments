@@ -146,17 +146,8 @@ export default function Navbar() {
 
         {/* Button flex justify-center items-center gap-4 absolute top-[230px] left-0 p-12*/}
         <div className={handleToggle()}>
-          <Button
-            text="Try Whitepace free"
-            btnClass="bg-red-500"
-            onClick={handleClick}
-          />
-          <Button
-            text="Login"
-            btnClass="bg-green-500"
-            yesNo="false"
-            onClick={handleClick}
-          />
+          <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
+          <Button text="Login" btnClass="" onClick={handleClick} />
         </div>
       </div>
 
