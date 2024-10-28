@@ -117,7 +117,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="flex justify-between items-center bg-[#222222] py-4 px-12">
+    <nav className="flex justify-between items-center bg-[#043873] py-4 px-12">
       {/* Logo */}
       <div className="flex justify-center items-center font-bold text-3xl gap-2">
         <Image src={figma_logo} alt="Figma Logo" className="w-7" />
@@ -146,8 +146,13 @@ export default function Navbar() {
 
         {/* Button flex justify-center items-center gap-4 absolute top-[230px] left-0 p-12*/}
         <div className={handleToggle()}>
+          <button
+            className="px-7 py-[10px] rounded-lg shadow-md font-medium text-[#043873] bg-[#FFE492]"
+            onClick={handleClick}
+          >
+            Login
+          </button>
           <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
-          <Button text="Login" btnClass="" onClick={handleClick} />
         </div>
       </div>
 
