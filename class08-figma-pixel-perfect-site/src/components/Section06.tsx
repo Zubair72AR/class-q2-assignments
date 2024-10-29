@@ -5,7 +5,7 @@ import Para from "../components/Para";
 import { FiCheckCircle } from "react-icons/fi";
 import Image from "next/image";
 
-export default function Section05() {
+export default function Section06() {
   const handleClick = () => {
     alert("Button Clicked");
   };
@@ -23,51 +23,58 @@ export default function Section05() {
         />
       </div>
       <div>
-        <div className="bg-[#043873] px-10 py-12 rounded-xl border-2 border-[#FFE492] max-w-[450px]">
-          <div className="flex flex-col gap-5 text-left">
+        <div className="bg-[#043873] px-10 py-12 rounded-xl border-2 border-[#FFE492] max-w-[450px] flex flex-col justify-start items-start gap-8 text-white">
+          <div className="flex flex-col gap-7 text-left">
             <p className="font-semibold text-2xl">Free</p>
-            <p className="font-bold text-4xl">$0</p>
+            <p className="font-bold text-4xl text-[#FFE492]">$0</p>
             <p className="font-medium text-lg">
               Capture ideas and find them quickly
             </p>
           </div>
-          <div className="bg-slate-400">
-            <span className="flex text-start">
-              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
-              <p className="font-medium text-[16px]">Sync unlimited devices</p>
-            </span>
-            <span className="flex text-start">
-              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
-              <p className="font-medium text-[16px]">10 GB monthly uploads</p>
-            </span>
-            <span className="flex text-start">
-              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
-              <p className="font-medium text-[16px]">200 MB max. note size</p>
-            </span>
-            <span className="flex text-start">
-              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
-              <p className="font-medium text-[16px]">
+          <div className="flex flex-col gap-6 text-left">
+            <p className="grid grid-cols-10">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-6 h-6 col-span-1" />
+              <span className="text-[16px] col-span-9">
+                Sync unlimited devices
+              </span>
+            </p>
+            <p className="grid grid-cols-10">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-6 h-6 col-span-1" />
+              <span className="text-[16px] col-span-9">
+                10 GB monthly uploads
+              </span>
+            </p>
+            <p className="grid grid-cols-10">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-6 h-6 col-span-1" />
+              <span className="text-[16px] col-span-9">
+                200 MB max. note size
+              </span>
+            </p>
+            <p className="grid grid-cols-10">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-6 h-6 col-span-1" />
+              <span className="text-[16px] col-span-9">
                 Customize Home dashboard and access extra widgets
-              </p>
-            </span>
-            <span className="flex text-start">
-              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
-              <p className="font-medium text-[16px]">
+              </span>
+            </p>
+            <p className="grid grid-cols-10">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-6 h-6 col-span-1" />
+              <span className="text-[16px] col-span-9">
                 Connect primary Google Calendar account
-              </p>
-            </span>
-            <span className="flex text-start">
-              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
-              <p className="font-medium text-[16px]">
+              </span>
+            </p>
+            <p className="grid grid-cols-10">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-6 h-6 col-span-1" />
+              <span className="text-[16px] col-span-9">
                 Add due dates, reminders, and notifications to your tasks
-              </p>
-            </span>
+              </span>
+            </p>
           </div>
-          <Button
-            text="Let’s Go"
-            btnClass="mx-auto lg:mx-0 mt-4"
+          <button
+            className="px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] hover:bg-[#A7CEFC] hover:text-[#043873]"
             onClick={handleClick}
-          />
+          >
+            Get Started
+          </button>
         </div>
       </div>
     </div>

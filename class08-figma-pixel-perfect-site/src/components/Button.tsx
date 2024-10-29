@@ -11,7 +11,7 @@ export default function Button({
 }) {
   return (
     <button
-      className={`flex justify-center items-center gap-2 px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] ${btnClass} hover:bg-[#A7CEFC]`}
+      className={`flex justify-center items-center gap-2 px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] ${btnClass} hover:bg-[#A7CEFC] hover:text-[#043873]`}
       onClick={onClick}
     >
       <p>{text}</p>
