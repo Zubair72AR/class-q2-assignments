@@ -23,18 +23,44 @@ export default function Section05() {
         />
       </div>
       <div>
-        <div className="bg-[#043873] text-left px-10 py-12 rounded-xl border-2 border-[#FFE492]">
-          <div className="flex flex-col gap-5">
+        <div className="bg-[#043873] px-10 py-12 rounded-xl border-2 border-[#FFE492] max-w-[450px]">
+          <div className="flex flex-col gap-5 text-left">
             <p className="font-semibold text-2xl">Free</p>
             <p className="font-bold text-4xl">$0</p>
             <p className="font-medium text-lg">
               Capture ideas and find them quickly
             </p>
           </div>
-          <div>
-            <span className="flex justify-start items-center gap-2">
-              <FiCheckCircle className="text-lg text-[#FFE492]" />
+          <div className="bg-slate-400">
+            <span className="flex text-start">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
               <p className="font-medium text-[16px]">Sync unlimited devices</p>
+            </span>
+            <span className="flex text-start">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
+              <p className="font-medium text-[16px]">10 GB monthly uploads</p>
+            </span>
+            <span className="flex text-start">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
+              <p className="font-medium text-[16px]">200 MB max. note size</p>
+            </span>
+            <span className="flex text-start">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
+              <p className="font-medium text-[16px]">
+                Customize Home dashboard and access extra widgets
+              </p>
+            </span>
+            <span className="flex text-start">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
+              <p className="font-medium text-[16px]">
+                Connect primary Google Calendar account
+              </p>
+            </span>
+            <span className="flex text-start">
+              <FiCheckCircle className="text-lg text-[#FFE492] w-7" />
+              <p className="font-medium text-[16px]">
+                Add due dates, reminders, and notifications to your tasks
+              </p>
             </span>
           </div>
           <Button
