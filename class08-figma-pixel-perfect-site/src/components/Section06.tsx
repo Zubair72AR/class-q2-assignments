@@ -2,6 +2,7 @@
 import Button from "../components/Button";
 import HeadingBr from "../components/HeadingBr";
 import Para from "../components/Para";
+import { FiCheckCircle } from "react-icons/fi";
 import Image from "next/image";
 
 export default function Section05() {
@@ -22,7 +23,20 @@ export default function Section05() {
         />
       </div>
       <div>
-        <div className="bg-[#043873]">
+        <div className="bg-[#043873] text-left px-10 py-12 rounded-xl border-2 border-[#FFE492]">
+          <div className="flex flex-col gap-5">
+            <p className="font-semibold text-2xl">Free</p>
+            <p className="font-bold text-4xl">$0</p>
+            <p className="font-medium text-lg">
+              Capture ideas and find them quickly
+            </p>
+          </div>
+          <div>
+            <span className="flex justify-start items-center gap-2">
+              <FiCheckCircle className="text-lg text-[#FFE492]" />
+              <p className="font-medium text-[16px]">Sync unlimited devices</p>
+            </span>
+          </div>
           <Button
             text="Let’s Go"
             btnClass="mx-auto lg:mx-0 mt-4"
