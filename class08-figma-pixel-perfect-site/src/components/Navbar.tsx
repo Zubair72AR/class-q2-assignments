@@ -7,6 +7,7 @@ import Button from "../components/Button";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 export default function Navbar() {
   // Responsive Menu
@@ -59,17 +60,19 @@ export default function Navbar() {
       ];
     } else {
       toggleClassName = [
-        "flex",
+        "sm:flex",
+        "block",
         "flex-col",
-        "md:flex-row",
+        "xs:flex-row",
         "justify-center",
         "items-start",
-        "md:items-center",
+        "xs:items-center",
         "gap-4",
         "absolute",
-        "top-[170px]",
+        "sm:top-[220px]",
+        "top-[200px]",
         "left-0",
-        "p-12",
+        "p-10",
         "md:relative",
         "md:top-[0px]",
         "md:left-0",
@@ -99,7 +102,7 @@ export default function Navbar() {
         "top-[52px]",
         "md:top-[72px]",
         "left-0",
-        "p-12",
+        "p-10",
         "pb-40",
         "md:pb-16",
         "w-full",
@@ -108,10 +111,12 @@ export default function Navbar() {
         "lg:justify-center",
         "lg:items-center",
         "lg:relative",
+        "lg:w-auto",
         "lg:top-[0px]",
         "lg:left-0",
         "lg:p-0",
         "lg:bg-none",
+        "lg:pb-0",
       ];
     }
     return menuClassName.join(" ");
@@ -120,7 +125,7 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center bg-[#043873] py-2 md:py-4 px-4 2xl:px-56 xl:px-8 md:px-6">
       {/* Logo */}
-      <div className="flex justify-center items-center gap-2">
+      <Link href="/" className="flex justify-center items-center gap-2">
         <Image
           src={Logo_Icon}
           alt="Logo Icon"
@@ -129,8 +134,8 @@ export default function Navbar() {
         <h1 className="font-bold text-[24px] md:text-[28px] text-white">
           whitepace
         </h1>
-      </div>
-      <div className="flex justify-between item-center md:gap-4 lg:gap-12">
+      </Link>
+      <div className="flex justify-between item-center md:gap-4 xl:gap-12">
         {/* Menu Links flex justify-center items-center gap-4 absolute top-[72px] left-0 p-12 pb-32 bg-[#222222] w-full*/}
         <ul className={handleMenu()}>
           {navLink.map((nav) => {
@@ -140,11 +145,12 @@ export default function Navbar() {
                   href={nav.path}
                   className={
                     isActive(nav.path)
-                      ? "text-white"
-                      : "text-[#919191] hover:text-green-500"
+                      ? "flex justify-start items-center text-white py-1 lg:py-0 hover:text-[#4F9CF9]"
+                      : "flex justify-start items-center text-[#bdcadb] py-1 lg:py-0 hover:text-[#4F9CF9]"
                   }
                 >
                   {nav.name}
+                  <RiArrowDropDownLine className="text-2xl" />
                 </Link>
               </li>
             );
@@ -154,16 +160,12 @@ export default function Navbar() {
         {/* Button */}
         <div className={handleToggle()}>
           <button
-            className="px-7 py-[10px] rounded-lg shadow-md font-medium text-[#043873] bg-[#FFE492]"
+            className="px-7 py-[10px] rounded-lg shadow-md font-medium text-[#043873] bg-[#FFE492] sm:my-0 my-3"
             onClick={handleClick}
           >
             Login
           </button>
-          <Button
-            text="Try Whitepace free"
-            btnClass="my-2"
-            onClick={handleClick}
-          />
+          <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
         </div>
         {/* Responsive Menu Icon */}
         <button
