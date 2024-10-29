@@ -159,7 +159,11 @@ export default function Navbar() {
           >
             Login
           </button>
-          <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
+          <Button
+            text="Try Whitepace free"
+            btnClass="my-2"
+            onClick={handleClick}
+          />
         </div>
         {/* Responsive Menu Icon */}
         <button

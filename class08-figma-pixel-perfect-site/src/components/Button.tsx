@@ -11,10 +11,10 @@ export default function Button({
 }) {
   return (
     <button
-      className={`flex justify-center items-center gap-2 px-5 py-[10px] font-medium rounded-lg shadow-md text-white bg-[#4F9CF9] ${btnClass}`}
+      className={`flex justify-center items-center gap-2 px-5 py-[10px] rounded-lg shadow-md font-medium text-white bg-[#4F9CF9] ${btnClass}`}
       onClick={onClick}
     >
-      {text}
+      <p>{text}</p>
       <IoMdArrowForward />
     </button>
   );
