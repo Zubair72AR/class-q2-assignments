@@ -3,7 +3,8 @@ import Button from "../components/Button";
 import HeadingBr from "../components/HeadingBr";
 import Para from "../components/Para";
 import Image from "next/image";
-import WebDevelop from "../../public/WebDevelop.svg";
+import HeroImage from "../../public/Hero.svg";
+import HeroLines from "../../public/Hero_Lines.svg";
 
 export default function section01() {
   const handleClick = () => {
@@ -11,12 +12,11 @@ export default function section01() {
   };
 
   return (
-    <div className="flex justify-center items-center gap-12 px-12 bg-[#222222]">
-      <div className="w-[500px]">
+    <div className="flex lg:flex-row flex-col justify-between items-center gap-4 xl:gap-8 2xl:gap-12 py-12 md:py-24 px-4 md:px-6 xl:px-8 2xl:px-44 bg-[#043873] bg-[url('../../public/Hero_Lines.svg')] bg-cover bg-center">
+      <div>
         <HeadingBr
-          heading1="Get More Done with"
-          heading2="Whitepace"
-          color="text-green-500"
+          headText="Get More Done with Whitepace"
+          headClass="text-white"
         />
         <Para
           para="Project management software that enables your teams to collaborate, plan, analyze and manage everyday tasks"
@@ -24,7 +24,11 @@ export default function section01() {
         />
         <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
       </div>
-      <Image src={WebDevelop} alt="Web Image" className="w-[500px]" />
+      <Image
+        src={HeroImage}
+        alt="Web Image"
+        className="w-[90%] lg:w-auto h-auto lg:h-[340px] xl:h-[370px] 2xl:h-[400px]"
+      />
     </div>
   );
 }

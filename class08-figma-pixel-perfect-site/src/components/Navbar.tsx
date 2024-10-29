@@ -123,7 +123,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="flex justify-between items-center bg-[#043873] py-2 md:py-4 px-4 2xl:px-56 xl:px-8 md:px-6">
+    <nav className="flex justify-between items-center bg-[#043873] py-2 md:py-4 px-4 md:px-6 xl:px-8 2xl:px-44">
       {/* Logo */}
       <Link href="/" className="flex justify-center items-center gap-2">
         <Image
@@ -145,8 +145,8 @@ export default function Navbar() {
                   href={nav.path}
                   className={
                     isActive(nav.path)
-                      ? "flex justify-start items-center text-white py-1 lg:py-0 hover:text-[#4F9CF9]"
-                      : "flex justify-start items-center text-[#bdcadb] py-1 lg:py-0 hover:text-[#4F9CF9]"
+                      ? "flex justify-start items-center text-[#A7CEFC] py-1 lg:py-0 hover:text-[#4F9CF9]"
+                      : "flex justify-start items-center text-white py-1 lg:py-0 hover:text-[#4F9CF9]"
                   }
                 >
                   {nav.name}
