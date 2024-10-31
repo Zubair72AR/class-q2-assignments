@@ -1,5 +1,5 @@
 "use client";
-import HeadingBr from "../components/HeadingBr";
+import HeadingBr from "./HeadingBr";
 import Image from "next/image";
 import Logo_Apple from "../../public/Logo_Apple.svg";
 import Logo_Google from "../../public/Logo_Google.svg";

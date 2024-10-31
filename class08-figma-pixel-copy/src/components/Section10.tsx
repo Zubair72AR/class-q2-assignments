@@ -1,7 +1,7 @@
 "use client";
-import Button from "../components/Button";
-import HeadingBr from "../components/HeadingBr";
-import Para from "../components/Para";
+import Button from "./Button";
+import HeadingBr from "./HeadingBr";
+import Para from "./Para";
 import Image from "next/image";
 import Favorite_Apps from "../../public/Favorite_Apps.svg";
 

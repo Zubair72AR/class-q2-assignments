@@ -3,7 +3,7 @@ import Image from "next/image";
 import Logo_Icon from "../../public/Logo_Icon.svg";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import Button from "../components/Button";
+import Button from "./Button";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
