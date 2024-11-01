@@ -13,6 +13,7 @@ import Section11 from "@/components/Section11";
 import ReviewSlider from "@/components/ReviewSlider";
 import Section12 from "@/components/Section12";
 import Section13 from "@/components/Section13";
+import Section14 from "@/components/Section14";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <ReviewSlider />
       <Section12 />
       <Section13 />
+      <Section14 />
     </div>
   );
 }

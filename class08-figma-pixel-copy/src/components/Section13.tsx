@@ -15,7 +15,7 @@ export default function Section13() {
   };
 
   return (
-    <div className="pt-12 md:pt-24 pb-5 px-4 md:px-6 xl:px-8 2xl:px-44 bg-[#043873]">
+    <div className="pt-12 md:pt-24 px-4 md:px-6 xl:px-8 2xl:px-44 bg-[#043873]">
       <div className="grid grid-cols-5 gap-12 mb-12">
         <div>
           <Link href="/" className="flex justify-start items-center gap-2 mb-3">
@@ -60,29 +60,41 @@ export default function Section13() {
         </div>
       </div>
       <hr className="text-[#4F9CF9] opacity-25" />
-      <div>
-        <div>
-          <div>
-            <MdLanguage />
-            <p className="font-light text-white">English</p>
-            <IoIosArrowDown />
+      <div className="flex justify-between items-center py-5">
+        <div className="flex justify-center items-center gap-7">
+          <div className="flex justify-center items-center gap-1 text-white">
+            <label htmlFor="Languages">
+              <MdLanguage />
+            </label>
+            <select className="font-light bg-[#043873] outline-none">
+              <option value="English" className="outline-none bg-none">
+                English
+              </option>
+              <option value="English" className="outline-none bg-none">
+                Arabic
+              </option>
+              <option value="English" className="outline-none bg-none">
+                Urdu
+              </option>
+              <option value="English" className="outline-none bg-none">
+                Spanish
+              </option>
+              <option value="English" className="outline-none bg-none">
+                Italian
+              </option>
+            </select>
           </div>
           <p className="font-light text-white">Terms & privacy</p>
           <p className="font-light text-white">Security</p>
           <p className="font-light text-white">Status</p>
           <p className="font-light text-white">©2021 Whitepace LLC.</p>
         </div>
-        <div>
-          <FaFacebookF />
-          <FaTwitter />
-          <FaLinkedinIn />
+        <div className="flex justify-center items-center gap-6 text-white">
+          <FaFacebookF className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
+          <FaTwitter className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
+          <FaLinkedinIn className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
         </div>
       </div>
-      <p className="font-light text-white">
-        Made with
-        <IoHeartSharp />
-        by BinJan <PiCopyrightBold /> Copy Rights Reserved
-      </p>
     </div>
   );
 }
