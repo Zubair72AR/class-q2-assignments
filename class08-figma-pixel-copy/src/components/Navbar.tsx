@@ -157,12 +157,11 @@ export default function Navbar() {
 
         {/* Button */}
         <div className={handleToggle()}>
-          <button
-            className="px-7 py-[10px] rounded-lg shadow-md font-medium text-[#043873] bg-[#FFE492] sm:my-0 my-3"
-            onClick={handleClick}
-          >
-            Login
-          </button>
+          <Link href="/login">
+            <button className="px-7 py-[10px] rounded-lg shadow-md font-medium text-[#043873] bg-[#FFE492] sm:my-0 my-3">
+              Login
+            </button>
+          </Link>
           <Button text="Try Whitepace free" btnClass="" onClick={handleClick} />
         </div>
         {/* Responsive Menu Icon */}
