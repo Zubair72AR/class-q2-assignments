@@ -1,9 +1,7 @@
 "use client";
-import Button from "./Button";
 import HeadingBr from "./HeadingBr";
 import Para from "./Para";
 import { FiCheckCircle } from "react-icons/fi";
-import Image from "next/image";
 
 export default function Section06() {
   const handleClick = () => {

@@ -18,7 +18,7 @@ export default function Navbar() {
   const isActive = (path: string) => path === pathname;
 
   // Navbar Link Setup
-  let navLink = [
+  const navLink = [
     {
       id: 1,
       path: "/products",
