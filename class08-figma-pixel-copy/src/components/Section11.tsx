@@ -1,11 +1,12 @@
-"use client";
+import HeadingBr from "./HeadingBr";
 
 export default function Section06() {
-  const handleClick = () => {
-    alert("Button Clicked");
-  };
-
   return (
-    <div className="flex flex-col justify-between items-center gap-8 py-12 md:py-24 px-4 md:px-6 xl:px-8 2xl:px-44 bg-white text-center"></div>
+    <div className="text-center flex flex-col gap-20 bg-white pt-12 md:pt-24 pb-12 px-4 md:px-6 xl:px-8 2xl:px-44">
+      <HeadingBr
+        headText="What Our Clients Says"
+        headClass="text-[#212529] bg-[url('../../public/Shape.svg')] bg-no-repeat bg-[center_110%]"
+      />
+    </div>
   );
 }
