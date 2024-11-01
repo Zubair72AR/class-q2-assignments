@@ -1,4 +1,3 @@
-import Colors from "@/components/Colors";
 import Section01 from "@/components/Section01";
 import Section02 from "@/components/Section02";
 import Section03 from "@/components/Section03";
@@ -10,7 +9,7 @@ import Section08 from "@/components/Section08";
 import Section09 from "@/components/Section09";
 import Section10 from "@/components/Section10";
 import Section11 from "@/components/Section11";
-import ReviewSlider from "@/components/ReviewSlider";
+import SwiperComponent from "@/components/SwiperComponent";
 import Section12 from "@/components/Section12";
 import Section13 from "@/components/Section13";
 import Section14 from "@/components/Section14";
@@ -29,7 +28,7 @@ export default function Home() {
       <Section09 />
       <Section10 />
       <Section11 />
-      <ReviewSlider />
+      <SwiperComponent />
       <Section12 />
       <Section13 />
       <Section14 />

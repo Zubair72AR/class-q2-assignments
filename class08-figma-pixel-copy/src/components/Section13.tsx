@@ -5,9 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { MdLanguage } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoHeartSharp } from "react-icons/io5";
-import { PiCopyrightBold } from "react-icons/pi";
 
 export default function Section13() {
   const handleClick = () => {
@@ -16,8 +13,8 @@ export default function Section13() {
 
   return (
     <div className="pt-12 md:pt-24 px-4 md:px-6 xl:px-8 2xl:px-44 bg-[#043873]">
-      <div className="grid grid-cols-5 gap-12 mb-12">
-        <div>
+      <div className="text-center md:text-start grid grid-cols-1 lg:grid-cols-5 gap-12 mb-12 ">
+        <div className="flex flex-col justify-center items-center md:block">
           <Link href="/" className="flex justify-start items-center gap-2 mb-3">
             <Image
               src={Logo_Icon}
@@ -56,13 +53,17 @@ export default function Section13() {
           <p className="mb-5 font-light text-white">
             Get started for free. Add your whole team as your needs grow.
           </p>
-          <Button text="Start today" btnClass="" onClick={handleClick} />
+          <Button
+            text="Start today"
+            btnClass="mx-auto md:mx-0"
+            onClick={handleClick}
+          />
         </div>
       </div>
-      <hr className="text-[#4F9CF9] opacity-25" />
-      <div className="flex justify-between items-center py-5">
-        <div className="flex justify-center items-center gap-7">
-          <div className="flex justify-center items-center gap-1 text-white">
+      <hr className="text-[#4F9CF9] opacity-25 hidden lg:block" />
+      <div className="block lg:flex justify-between items-center py-5">
+        <div className="block sm:flex justify-center items-center gap-7 my-6 lg:my-0 text-center">
+          <div className="flex justify-center items-center gap-1 text-white my-2 sm:my-0">
             <label htmlFor="Languages">
               <MdLanguage />
             </label>
@@ -84,12 +85,15 @@ export default function Section13() {
               </option>
             </select>
           </div>
-          <p className="font-light text-white">Terms & privacy</p>
-          <p className="font-light text-white">Security</p>
-          <p className="font-light text-white">Status</p>
-          <p className="font-light text-white">©2021 Whitepace LLC.</p>
+          <p className="font-light text-white my-2 sm:my-0">Terms & privacy</p>
+          <p className="font-light text-white my-2 sm:my-0">Security</p>
+          <p className="font-light text-white my-2 sm:my-0">Status</p>
+          <p className="font-light text-white my-2 sm:my-0">
+            ©2021 Whitepace LLC.
+          </p>
         </div>
-        <div className="flex justify-center items-center gap-6 text-white">
+        <hr className="text-[#4F9CF9] opacity-25 block lg:hidden" />
+        <div className="flex justify-center items-center gap-6 text-white my-6 lg:my-0">
           <FaFacebookF className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
           <FaTwitter className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
           <FaLinkedinIn className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />

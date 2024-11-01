@@ -14,14 +14,26 @@ export default function Section09() {
         headClass="text-[#212529] bg-[url('../../public/Shape.svg')] bg-no-repeat bg-[center_110%]"
       />
       <div className="flex justify-between items-center gap-20 lg:gap-0 lg:flex-row flex-col">
-        <Image src={Logo_Apple} alt="Logo_Apple" className="h-16 w-auto" />
+        <Image
+          src={Logo_Apple}
+          alt="Logo_Apple"
+          className="h-14 md:h-16 w-auto"
+        />
         <Image
           src={Logo_Microsoft}
           alt="Logo_Microsoft"
-          className="h-16 w-auto"
+          className="h-14 md:h-16 w-auto"
         />
-        <Image src={Logo_Slack} alt="Logo_Slack" className="h-16 w-auto" />
-        <Image src={Logo_Google} alt="Logo_Google" className="h-16 w-auto" />
+        <Image
+          src={Logo_Slack}
+          alt="Logo_Slack"
+          className="h-14 md:h-16 w-auto"
+        />
+        <Image
+          src={Logo_Google}
+          alt="Logo_Google"
+          className="h-14 md:h-16 w-auto"
+        />
       </div>
     </div>
   );

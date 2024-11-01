@@ -62,8 +62,6 @@ export default function Navbar() {
       toggleClassName = [
         "sm:flex",
         "block",
-        "flex-col",
-        "xs:flex-row",
         "justify-center",
         "items-start",
         "xs:items-center",

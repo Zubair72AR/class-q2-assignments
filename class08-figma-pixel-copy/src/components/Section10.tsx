@@ -11,7 +11,7 @@ export default function Section10() {
   };
 
   return (
-    <div className="flex lg:flex-row-reverse flex-col justify-between items-center gap-20 lg:gap-6 2xl:gap-12 py-12 md:py-24 px-4 md:px-6 xl:px-8 2xl:px-44 bg-[#043873] bg-[url('../../public/Favorite_Apps_Lines.svg')] bg-cover bg-center text-center lg:text-start">
+    <div className="flex lg:flex-row-reverse flex-col-reverse justify-between items-center gap-20 lg:gap-6 2xl:gap-12 py-12 md:py-24 px-4 md:px-6 xl:px-8 2xl:px-44 bg-[#043873] bg-[url('../../public/Favorite_Apps_Lines.svg')] bg-cover bg-center text-center lg:text-start">
       <div className="flex flex-col justify-center items-center lg:items-start gap-5 w-full sm:w-[90%] md:w-[80%] lg:w-1/2">
         <HeadingBr
           headText="Work with Your Favorite Apps Using whitepace"
