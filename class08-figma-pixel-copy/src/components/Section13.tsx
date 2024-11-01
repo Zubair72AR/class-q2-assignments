@@ -62,7 +62,7 @@ export default function Section13() {
       </div>
       <hr className="text-[#4F9CF9] opacity-25 hidden lg:block" />
       <div className="block lg:flex justify-between items-center py-5">
-        <div className="block sm:flex justify-center items-center gap-7 my-6 lg:my-0 text-center">
+        <div className="block sm:flex justify-center md:justify-start items-center gap-7 my-6 lg:my-0 text-center sm:text-start">
           <div className="flex justify-center items-center gap-1 text-white my-2 sm:my-0">
             <label htmlFor="Languages">
               <MdLanguage />
@@ -93,7 +93,7 @@ export default function Section13() {
           </p>
         </div>
         <hr className="text-[#4F9CF9] opacity-25 block lg:hidden" />
-        <div className="flex justify-center items-center gap-6 text-white my-6 lg:my-0">
+        <div className="flex justify-center md:justify-start items-center gap-6 text-white my-6 lg:my-0 text-center sm:text-start">
           <FaFacebookF className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
           <FaTwitter className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
           <FaLinkedinIn className="hover:text-[#4F9CF9] hover:scale-150 transition-all" />
