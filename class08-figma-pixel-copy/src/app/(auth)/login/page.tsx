@@ -143,7 +143,7 @@ export default function LogIn() {
             )}
             <button
               type="submit"
-              className="w-full bg-red-500 py-2 text-white mt-4 font-medium uppercase rounded-md shadow-sm hover:bg-red-600 transition-all"
+              className="w-full bg-[#043873] py-2 text-white mt-4 font-medium uppercase rounded-md shadow-sm hover:bg-red-600 transition-all"
             >
               Sign in
             </button>
@@ -168,7 +168,7 @@ export default function LogIn() {
           <p className="mt-20">New Here?</p>
           <button
             type="button"
-            className="bg-white px-8 py-2 text-red-600 mt-4 mb-6 font-medium rounded-md uppercase shadow-sm hover:bg-gray-900 hover:text-white transition-all"
+            className="bg-white px-8 py-2 text-[#043873] mt-4 mb-6 font-medium rounded-md uppercase shadow-sm hover:bg-gray-900 hover:text-white transition-all"
           >
             <Link href="/signup">Sign Up</Link>
           </button>
