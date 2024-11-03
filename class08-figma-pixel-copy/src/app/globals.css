@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/*
 .bg-image {
   background-color: #073263;
   background-blend-mode: overlay;
@@ -9,3 +9,4 @@
   background-size: cover;
   background-position: center;
 }
+  */

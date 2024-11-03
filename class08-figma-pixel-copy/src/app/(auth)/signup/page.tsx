@@ -96,9 +96,9 @@ export default function LogIn() {
     }
   };
   return (
-    <div className="flex justify-center items-center h-full">
-      <div className="bg-image justify-center items-center m-auto my-8 rounded-2xl  overflow-hidden shadow-md w-2/3 lg:flex">
-        <div className="w-full p-6 lg:w-1/2 text-white text-center">
+    <div className="flex flex-col justify-center items-center h-full">
+      <div className="bg-image justify-center items-center m-auto my-16 rounded-2xl bg-[#043873] overflow-hidden shadow-md w-2/3 lg:flex">
+        <div className="w-full p-6 lg:w-1/2 text-white text-center bg-[#043873]">
           <h1 className="text-xl my-6">Welcome to</h1>
 
           <Link href="/" className="flex justify-center items-center gap-2">
@@ -118,20 +118,20 @@ export default function LogIn() {
           >
             <Link href="/login">Sign In</Link>
           </button>
-          <p className="text-red-300 text-xs text-center mt-6">
+          <p className="text-[#4F9CF9] text-xs text-center mt-6">
             &copy; 2001-2024 All Rights Reserved
             <br />
-            <Link href="#" className="text-red-200 underline font-medium">
+            <Link href="#" className="text-[#FFE492] underline font-medium">
               Privacy
             </Link>{" "}
             and{" "}
-            <Link href="#" className="text-red-200 underline font-medium">
+            <Link href="#" className="text-[#FFE492] underline font-medium">
               Terms
             </Link>
           </p>
         </div>
         <div className="w-full bg-white px-10 py-12 lg:w-1/2">
-          <h1 className="text-center font-bold text-3xl text-gray-900 mb-6">
+          <h1 className="text-center font-bold text-3xl text-[#212529] mb-6">
             Create Account
           </h1>
           <div className="flex justify-center items-center gap-2">
@@ -177,9 +177,9 @@ export default function LogIn() {
               <div className="flex flex-col">
                 <label
                   htmlFor="fName"
-                  className="text-gray-900 mt-4 font-medium"
+                  className="text-[#212529] mt-4 font-medium"
                 >
-                  First Name <span className="text-[#043873]">*</span>
+                  First Name <span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
@@ -197,9 +197,9 @@ export default function LogIn() {
               <div className="flex flex-col">
                 <label
                   htmlFor="LName"
-                  className="text-gray-900 mt-4 font-medium"
+                  className="text-[#212529] mt-4 font-medium"
                 >
-                  Last Name <span className="text-[#043873]">*</span>
+                  Last Name <span className="text-red-600">*</span>
                 </label>
                 <input
                   type="text"
@@ -215,8 +215,8 @@ export default function LogIn() {
                 )}
               </div>
             </div>
-            <label htmlFor="email" className="text-gray-900 mt-4 font-medium">
-              Email ID <span className="text-[#043873]">*</span>
+            <label htmlFor="email" className="text-[#212529] mt-4 font-medium">
+              Email ID <span className="text-red-600">*</span>
             </label>
             <input
               type="text"
@@ -232,9 +232,9 @@ export default function LogIn() {
             )}
             <label
               htmlFor="password"
-              className="text-gray-900 mt-4 font-medium"
+              className="text-[#212529] mt-4 font-medium"
             >
-              Password <span className="text-[#043873]">*</span>
+              Password <span className="text-red-600">*</span>
             </label>
             <input
               type="password"
@@ -250,7 +250,7 @@ export default function LogIn() {
             )}
             <button
               type="submit"
-              className="w-full bg-red-500 py-2 text-white mt-4 font-medium uppercase rounded-md shadow-sm hover:bg-[#043873] transition-all"
+              className="w-full bg-[#043873] py-2 text-white mt-4 font-medium uppercase rounded-md shadow-sm hover:bg-gray-900 transition-all"
             >
               Sign Up
             </button>

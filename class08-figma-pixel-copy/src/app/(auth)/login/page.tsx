@@ -63,10 +63,10 @@ export default function LogIn() {
     }
   };
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="bg-image justify-center items-center m-auto rounded-2xl  overflow-hidden shadow-md w-2/3 lg:flex">
+    <div className="flex flex-col justify-center items-center h-full">
+      <div className="bg-[#043873] justify-center items-center m-auto my-16 rounded-2xl  overflow-hidden shadow-md w-2/3 lg:flex">
         <div className="w-full bg-white px-10 py-12 lg:w-1/2">
-          <h1 className="text-center font-bold text-3xl text-gray-900 mb-6">
+          <h1 className="text-center font-bold text-3xl text-[#212529] mb-6">
             Sign in
           </h1>
           <div className="flex justify-center items-center gap-2">
@@ -108,7 +108,7 @@ export default function LogIn() {
             </Link>
           </div>
           <form onSubmit={submitHandling} className="flex flex-col mt-6 mb-1">
-            <label htmlFor="email" className="text-gray-900 mt-4 font-medium">
+            <label htmlFor="email" className="text-[#212529] mt-4 font-medium">
               Username
             </label>
             <input
@@ -125,7 +125,7 @@ export default function LogIn() {
             )}
             <label
               htmlFor="password"
-              className="text-gray-900 mt-4 font-medium"
+              className="text-[#212529] mt-4 font-medium"
             >
               Password
             </label>
@@ -143,16 +143,16 @@ export default function LogIn() {
             )}
             <button
               type="submit"
-              className="w-full bg-[#043873] py-2 text-white mt-4 font-medium uppercase rounded-md shadow-sm hover:bg-red-600 transition-all"
+              className="w-full bg-[#043873] py-2 text-white mt-4 font-medium uppercase rounded-md shadow-sm hover:bg-gray-900 transition-all"
             >
               Sign in
             </button>
           </form>
-          <Link href="#" className="text-blue-600 text-sm">
+          <Link href="#" className="text-[#043873] text-sm">
             Forgot your password?
           </Link>
         </div>
-        <div className="w-full p-6 lg:w-1/2 text-white text-center">
+        <div className="w-full p-6 lg:w-1/2 text-white text-center bg-[#043873]">
           <h1 className="text-xl my-6">Welcome to</h1>
 
           <Link href="/" className="flex justify-center items-center gap-2">
@@ -172,14 +172,14 @@ export default function LogIn() {
           >
             <Link href="/signup">Sign Up</Link>
           </button>
-          <p className="text-red-300 text-xs text-center mt-6">
+          <p className="text-[#4F9CF9] text-xs text-center mt-6">
             &copy; 2001-2024 All Rights Reserved
             <br />
-            <Link href="#" className="text-red-200 underline font-medium">
+            <Link href="#" className="text-[#FFE492] underline font-medium">
               Privacy
             </Link>{" "}
             and{" "}
-            <Link href="#" className="text-red-200 underline font-medium">
+            <Link href="#" className="text-[#FFE492] underline font-medium">
               Terms
             </Link>
           </p>
