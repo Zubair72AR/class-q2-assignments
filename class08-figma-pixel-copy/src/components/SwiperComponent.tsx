@@ -118,30 +118,64 @@ const SwiperComponent = () => {
     >
       {reviewCards.map((review, index) => (
         <SwiperSlide key={index} className="mb-12">
-          <div className="w-[350px] bg-[#4F9CF9] rounded-xl pt-12 pb-10 px-9 text-start shadow-lg">
-            <BiSolidQuoteLeft className="mb-7 text-white text-7xl" />
-            <p className="text-sm font-light text-white min-h-[70px] mb-6">
-              {review.reviewText}
-            </p>
-            <hr className="pb-6 border-white" />
-            <div className="flex justify-start items-center gap-5 min-h-28">
-              <Image
-                src={review.reviewImage}
-                alt={review.reviewerName}
-                width={80}
-                height={80}
-                className="w-[95px] rounded-full"
+          {({ isActive }) => (
+            <div
+              className={
+                isActive
+                  ? "w-[350px] bg-white border-2 border-[#FFE492] rounded-xl pt-12 pb-10 px-9 text-start shadow-lg"
+                  : "w-[350px] bg-[#4F9CF9] border-2 border-[#A7CEFC] rounded-xl pt-12 pb-10 px-9 text-start shadow-lg"
+              }
+            >
+              <BiSolidQuoteLeft
+                className={
+                  isActive
+                    ? "mb-7 text-[#043873] text-7xl"
+                    : "mb-7 text-white text-7xl"
+                }
               />
-              <div className="text-start">
-                <h3 className="font-semibold text-xl text-[#043873] pb-2">
-                  {review.reviewerName}
-                </h3>
-                <p className="text-white text-sm font-light">
-                  {review.reviewerPosition}
-                </p>
+              <p
+                className={
+                  isActive
+                    ? "text-sm text-[#212529] min-h-[70px] mb-6"
+                    : "text-sm text-white min-h-[70px] mb-6"
+                }
+              >
+                {review.reviewText}
+              </p>
+              <hr
+                className={
+                  isActive ? "pb-6 border-gray-300" : "pb-6 border-white"
+                }
+              />
+              <div className="flex justify-start items-center gap-5 min-h-28">
+                <Image
+                  src={review.reviewImage}
+                  alt={review.reviewerName}
+                  width={80}
+                  height={80}
+                  className="w-[95px] rounded-full"
+                />
+                <div className="text-start">
+                  <h3
+                    className={
+                      isActive
+                        ? "font-semibold text-xl text-[#212529] pb-2"
+                        : "font-semibold text-xl text-[#043873] pb-2"
+                    }
+                  >
+                    {review.reviewerName}
+                  </h3>
+                  <p
+                    className={
+                      isActive ? "text-[#212529] text-xs" : "text-white text-xs"
+                    }
+                  >
+                    {review.reviewerPosition}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </SwiperSlide>
       ))}
     </Swiper>
