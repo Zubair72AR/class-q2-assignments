@@ -9,10 +9,6 @@ export default function Section06() {
   const [isActivePersonal, setIsActivePersonal] = useState(true);
   const [isActiveOrganization, setIsActiveOrganization] = useState(false);
 
-  const handleClick = () => {
-    alert("Button Clicked");
-  };
-
   const eventHandlerFree = () => {
     setIsActiveFree(!isActiveFree);
     setIsActivePersonal(false);
