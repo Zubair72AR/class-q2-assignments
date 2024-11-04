@@ -97,7 +97,7 @@ export default function LogIn() {
   };
   return (
     <div className="flex flex-col justify-center items-center h-full">
-      <div className="bg-image justify-center items-center m-auto my-16 rounded-2xl bg-[#043873] overflow-hidden shadow-md w-2/3 lg:flex">
+      <div className="bg-image justify-center items-center m-auto my-16 rounded-2xl bg-[#043873] overflow-hidden shadow-md w-[85%] md:w-2/3 lg:flex">
         <div className="w-full p-6 lg:w-1/2 text-white text-center bg-[#043873]">
           <h1 className="text-xl my-6">Welcome to</h1>
 
@@ -143,7 +143,7 @@ export default function LogIn() {
             </Link>
             <Link
               href="https://www.youtube.com/"
-              className="p-2 rounded-full bg-[#043873] text-white transition-all duration-500 shadow-md hover:-translate-y-1 hover:scale-110 hover:bg-red-700"
+              className="p-2 rounded-full bg-red-600 text-white transition-all duration-500 shadow-md hover:-translate-y-1 hover:scale-110 hover:bg-red-700"
             >
               <FaYoutube />
             </Link>
@@ -167,7 +167,7 @@ export default function LogIn() {
             </Link>
             <Link
               href="https://www.twitter.com/"
-              className="p-2 rounded-full bg-gray-900 text-white transition-all duration-500 hover:-translate-y-1 hover:scale-110 hover:bg-gray-800"
+              className="p-2 rounded-full bg-gray-900 text-white transition-all duration-500 shadow-md hover:-translate-y-1 hover:scale-110 hover:bg-gray-800"
             >
               <FaXTwitter />
             </Link>

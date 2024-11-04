@@ -5,14 +5,28 @@ import Para from "./Para";
 import { FiCheckCircle } from "react-icons/fi";
 
 export default function Section06() {
-  const [isActive, setIsActive] = useState(true);
+  const [isActiveFree, setIsActiveFree] = useState(false);
+  const [isActivePersonal, setIsActivePersonal] = useState(true);
+  const [isActiveOrganization, setIsActiveOrganization] = useState(false);
 
   const handleClick = () => {
     alert("Button Clicked");
   };
 
-  const eventHandler = () => {
-    setIsActive(!isActive);
+  const eventHandlerFree = () => {
+    setIsActiveFree(!isActiveFree);
+    setIsActivePersonal(false);
+    setIsActiveOrganization(false);
+  };
+  const eventHandlerPersonal = () => {
+    setIsActiveFree(false);
+    setIsActivePersonal(!isActivePersonal);
+    setIsActiveOrganization(false);
+  };
+  const eventHandlerOrganization = () => {
+    setIsActiveFree(false);
+    setIsActivePersonal(false);
+    setIsActiveOrganization(!isActiveOrganization);
   };
 
   return (
@@ -27,20 +41,20 @@ export default function Section06() {
           paraClass="text-[#212529]"
         />
       </div>
-      <div>
+      <div className="flex flex-col md:flex-row justify-between items-center gap-2 lg:gap-6 my-6">
         <div
           className={
-            isActive
-              ? "bg-[#043873] px-10 py-12 rounded-xl border-2 border-[#043873] max-w-[450px] flex flex-col justify-start items-start gap-8 text-white hover:scale-105 transition-all"
-              : "bg-white px-10 py-12 rounded-xl border-2 border-[#FFE492] max-w-[450px] flex flex-col justify-start items-start gap-8 text-[#212529] hover:scale-105 transition-all"
+            isActiveFree
+              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-105 hover:scale-[103%] transition-all"
+              : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
           }
-          onClick={eventHandler}
+          onClick={eventHandlerFree}
         >
-          <div className="flex flex-col gap-7 text-left">
+          <div className="flex flex-col gap-5 text-left">
             <p className="font-semibold text-2xl">Free</p>
             <p
               className={
-                isActive
+                isActiveFree
                   ? "font-bold text-4xl text-[#FFE492]"
                   : "font-bold text-4xl text-[#043873]"
               }
@@ -51,11 +65,11 @@ export default function Section06() {
               Capture ideas and find them quickly
             </p>
           </div>
-          <div className="flex flex-col gap-6 text-left">
-            <p className="grid grid-cols-10">
+          <div className="flex flex-col gap-4 text-left">
+            <p className="grid grid-cols-10 gap-4">
               <FiCheckCircle
                 className={
-                  isActive
+                  isActiveFree
                     ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
                     : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
                 }
@@ -64,10 +78,10 @@ export default function Section06() {
                 Sync unlimited devices
               </span>
             </p>
-            <p className="grid grid-cols-10">
+            <p className="grid grid-cols-10 gap-4">
               <FiCheckCircle
                 className={
-                  isActive
+                  isActiveFree
                     ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
                     : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
                 }
@@ -76,10 +90,10 @@ export default function Section06() {
                 10 GB monthly uploads
               </span>
             </p>
-            <p className="grid grid-cols-10">
+            <p className="grid grid-cols-10 gap-4">
               <FiCheckCircle
                 className={
-                  isActive
+                  isActiveFree
                     ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
                     : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
                 }
@@ -88,10 +102,10 @@ export default function Section06() {
                 200 MB max. note size
               </span>
             </p>
-            <p className="grid grid-cols-10">
+            <p className="grid grid-cols-10 gap-4">
               <FiCheckCircle
                 className={
-                  isActive
+                  isActiveFree
                     ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
                     : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
                 }
@@ -100,10 +114,10 @@ export default function Section06() {
                 Customize Home dashboard and access extra widgets
               </span>
             </p>
-            <p className="grid grid-cols-10">
+            <p className="grid grid-cols-10 gap-4">
               <FiCheckCircle
                 className={
-                  isActive
+                  isActiveFree
                     ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
                     : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
                 }
@@ -112,10 +126,10 @@ export default function Section06() {
                 Connect primary Google Calendar account
               </span>
             </p>
-            <p className="grid grid-cols-10">
+            <p className="grid grid-cols-10 gap-4">
               <FiCheckCircle
                 className={
-                  isActive
+                  isActiveFree
                     ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
                     : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
                 }
@@ -127,11 +141,225 @@ export default function Section06() {
           </div>
           <button
             className={
-              isActive
-                ? "px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] hover:bg-[#A7CEFC] hover:text-[#043873]"
-                : "px-5 py-[10px] rounded-lg shadow-md text-white bg-[#043873] hover:bg-[#A7CEFC] hover:text-[#043873]"
+              isActiveFree
+                ? "font-semibold px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] border-[3px] border-transparent hover:bg-[#A7CEFC] hover:text-[#043873]"
+                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#A7CEFC] hover:text-[#043873]"
             }
-            onClick={eventHandler}
+            onClick={eventHandlerFree}
+          >
+            Get Started
+          </button>
+        </div>
+        <div
+          className={
+            isActivePersonal
+              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-105 hover:scale-[103%] transition-all"
+              : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
+          }
+          onClick={eventHandlerPersonal}
+        >
+          <div className="flex flex-col gap-5 text-left">
+            <p className="font-semibold text-2xl">Personal</p>
+            <p
+              className={
+                isActivePersonal
+                  ? "font-bold text-4xl text-[#FFE492]"
+                  : "font-bold text-4xl text-[#043873]"
+              }
+            >
+              $11.99
+            </p>
+            <p className="font-medium text-lg">Keep home and family on track</p>
+          </div>
+          <div className="flex flex-col gap-4 text-left">
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActivePersonal
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Sync unlimited devices
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActivePersonal
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                10 GB monthly uploads
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActivePersonal
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                200 MB max. note size
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActivePersonal
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Customize Home dashboard and access extra widgets
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActivePersonal
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Connect primary Google Calendar account
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActivePersonal
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Add due dates, reminders, and notifications to your tasks
+              </span>
+            </p>
+          </div>
+          <button
+            className={
+              isActivePersonal
+                ? "font-semibold px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] border-[3px] border-transparent hover:bg-[#A7CEFC] hover:text-[#043873]"
+                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#A7CEFC] hover:text-[#043873]"
+            }
+            onClick={eventHandlerPersonal}
+          >
+            Get Started
+          </button>
+        </div>
+        <div
+          className={
+            isActiveOrganization
+              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-105 hover:scale-[103%] transition-all"
+              : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
+          }
+          onClick={eventHandlerOrganization}
+        >
+          <div className="flex flex-col gap-5 text-left">
+            <p className="font-semibold text-2xl">Organization</p>
+            <p
+              className={
+                isActiveOrganization
+                  ? "font-bold text-4xl text-[#FFE492]"
+                  : "font-bold text-4xl text-[#043873]"
+              }
+            >
+              $49.99
+            </p>
+            <p className="font-medium text-lg">
+              Capture ideas and find them quickly
+            </p>
+          </div>
+          <div className="flex flex-col gap-4 text-left">
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActiveOrganization
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Sync unlimited devices
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActiveOrganization
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                10 GB monthly uploads
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActiveOrganization
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                200 MB max. note size
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActiveOrganization
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Customize Home dashboard and access extra widgets
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActiveOrganization
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Connect primary Google Calendar account
+              </span>
+            </p>
+            <p className="grid grid-cols-10 gap-4">
+              <FiCheckCircle
+                className={
+                  isActiveOrganization
+                    ? "text-lg text-[#FFE492] w-6 h-6 col-span-1"
+                    : "text-lg text-[#4F9CF9] w-6 h-6 col-span-1"
+                }
+              />
+              <span className="text-[16px] col-span-9">
+                Add due dates, reminders, and notifications to your tasks
+              </span>
+            </p>
+          </div>
+          <button
+            className={
+              isActiveOrganization
+                ? "font-semibold px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] border-[3px] border-transparent hover:bg-[#A7CEFC] hover:text-[#043873]"
+                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#A7CEFC] hover:text-[#043873]"
+            }
+            onClick={eventHandlerOrganization}
           >
             Get Started
           </button>

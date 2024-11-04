@@ -153,7 +153,7 @@ const SwiperComponent = () => {
                   alt={review.reviewerName}
                   width={80}
                   height={80}
-                  className="w-[95px] rounded-full hover:scale-110 transition-all"
+                  className="w-[95px] rounded-full hover:scale-110 transition-all border-2 shadow-md"
                 />
                 <div className="text-start">
                   <h3

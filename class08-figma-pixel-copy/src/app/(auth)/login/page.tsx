@@ -64,7 +64,7 @@ export default function LogIn() {
   };
   return (
     <div className="flex flex-col justify-center items-center h-full">
-      <div className="bg-[#043873] justify-center items-center m-auto my-16 rounded-2xl  overflow-hidden shadow-md w-2/3 lg:flex">
+      <div className="bg-[#043873] justify-center items-center m-auto my-16 rounded-2xl  overflow-hidden shadow-md w-[85%] md:w-2/3 flex justify-center items-center flex-col-reverse lg:flex-row">
         <div className="w-full bg-white px-10 py-12 lg:w-1/2">
           <h1 className="text-center font-bold text-3xl text-[#212529] mb-6">
             Sign in
@@ -102,7 +102,7 @@ export default function LogIn() {
             </Link>
             <Link
               href="https://www.twitter.com/"
-              className="p-2 rounded-full bg-gray-900 text-white transition-all duration-500 hover:-translate-y-1 hover:scale-110 hover:bg-gray-800"
+              className="p-2 rounded-full bg-gray-900 text-white transition-all duration-500 shadow-md hover:-translate-y-1 hover:scale-110 hover:bg-gray-800"
             >
               <FaXTwitter />
             </Link>
@@ -148,9 +148,17 @@ export default function LogIn() {
               Sign in
             </button>
           </form>
-          <Link href="#" className="text-[#043873] text-sm">
-            Forgot your password?
-          </Link>
+          <div className="flex justify-between items-center mt-2">
+            <div className="flex justify-center items-center gap-1">
+              <input type="checkbox" className="bg-red-600 text-green-700" />
+              <label className="text-[#043873] text-xs font-medium">
+                Remember Me
+              </label>
+            </div>
+            <Link href="#" className="text-[#212529] text-xs font-medium">
+              Forgot your password?
+            </Link>
+          </div>
         </div>
         <div className="w-full p-6 lg:w-1/2 text-white text-center bg-[#043873]">
           <h1 className="text-xl my-6">Welcome to</h1>
