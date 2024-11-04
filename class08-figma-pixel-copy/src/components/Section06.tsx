@@ -10,19 +10,37 @@ export default function Section06() {
   const [isActiveOrganization, setIsActiveOrganization] = useState(false);
 
   const eventHandlerFree = () => {
-    setIsActiveFree(!isActiveFree);
-    setIsActivePersonal(false);
-    setIsActiveOrganization(false);
+    if (isActiveFree == false) {
+      setIsActiveFree(true);
+      setIsActivePersonal(false);
+      setIsActiveOrganization(false);
+    } else {
+      setIsActiveFree(true);
+      setIsActivePersonal(false);
+      setIsActiveOrganization(false);
+    }
   };
   const eventHandlerPersonal = () => {
-    setIsActiveFree(false);
-    setIsActivePersonal(!isActivePersonal);
-    setIsActiveOrganization(false);
+    if (isActivePersonal == false) {
+      setIsActiveFree(false);
+      setIsActivePersonal(true);
+      setIsActiveOrganization(false);
+    } else {
+      setIsActiveFree(false);
+      setIsActivePersonal(true);
+      setIsActiveOrganization(false);
+    }
   };
   const eventHandlerOrganization = () => {
-    setIsActiveFree(false);
-    setIsActivePersonal(false);
-    setIsActiveOrganization(!isActiveOrganization);
+    if (isActiveOrganization == false) {
+      setIsActiveFree(false);
+      setIsActivePersonal(false);
+      setIsActiveOrganization(true);
+    } else {
+      setIsActiveFree(false);
+      setIsActivePersonal(false);
+      setIsActiveOrganization(true);
+    }
   };
 
   return (
@@ -41,8 +59,8 @@ export default function Section06() {
         <div
           className={
             isActiveFree
-              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
-              : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
+              ? "bg-[#043873] px-7 xl:px-9 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
+              : "bg-white px-7 xl:px-9 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] lg:flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all hidden"
           }
           onClick={eventHandlerFree}
         >
@@ -62,7 +80,7 @@ export default function Section06() {
             </p>
           </div>
           <div className="flex flex-col gap-4 text-left">
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveFree
@@ -74,7 +92,7 @@ export default function Section06() {
                 Sync unlimited devices
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveFree
@@ -86,7 +104,7 @@ export default function Section06() {
                 10 GB monthly uploads
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveFree
@@ -98,7 +116,7 @@ export default function Section06() {
                 200 MB max. note size
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveFree
@@ -110,7 +128,7 @@ export default function Section06() {
                 Customize Home dashboard and access extra widgets
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveFree
@@ -122,7 +140,7 @@ export default function Section06() {
                 Connect primary Google Calendar account
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveFree
@@ -149,8 +167,8 @@ export default function Section06() {
         <div
           className={
             isActivePersonal
-              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
-              : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
+              ? "bg-[#043873] px-7 xl:px-9 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
+              : "bg-white px-7 xl:px-9 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] lg:flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all hidden"
           }
           onClick={eventHandlerPersonal}
         >
@@ -165,10 +183,12 @@ export default function Section06() {
             >
               $11.99
             </p>
-            <p className="font-medium text-lg">Keep home and family on track</p>
+            <p className="font-medium text-lg">
+              Capture ideas and find them quickly
+            </p>
           </div>
           <div className="flex flex-col gap-4 text-left">
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActivePersonal
@@ -180,7 +200,7 @@ export default function Section06() {
                 Sync unlimited devices
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActivePersonal
@@ -192,7 +212,7 @@ export default function Section06() {
                 10 GB monthly uploads
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActivePersonal
@@ -204,7 +224,7 @@ export default function Section06() {
                 200 MB max. note size
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActivePersonal
@@ -216,7 +236,7 @@ export default function Section06() {
                 Customize Home dashboard and access extra widgets
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActivePersonal
@@ -228,7 +248,7 @@ export default function Section06() {
                 Connect primary Google Calendar account
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActivePersonal
@@ -255,8 +275,8 @@ export default function Section06() {
         <div
           className={
             isActiveOrganization
-              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
-              : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
+              ? "bg-[#043873] px-7 xl:px-9 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
+              : "bg-white px-7 xl:px-9 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] lg:flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all hidden"
           }
           onClick={eventHandlerOrganization}
         >
@@ -276,7 +296,7 @@ export default function Section06() {
             </p>
           </div>
           <div className="flex flex-col gap-4 text-left">
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveOrganization
@@ -288,7 +308,7 @@ export default function Section06() {
                 Sync unlimited devices
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveOrganization
@@ -300,7 +320,7 @@ export default function Section06() {
                 10 GB monthly uploads
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveOrganization
@@ -312,7 +332,7 @@ export default function Section06() {
                 200 MB max. note size
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveOrganization
@@ -324,7 +344,7 @@ export default function Section06() {
                 Customize Home dashboard and access extra widgets
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveOrganization
@@ -336,7 +356,7 @@ export default function Section06() {
                 Connect primary Google Calendar account
               </span>
             </p>
-            <p className="grid grid-cols-10 gap-4">
+            <p className="grid grid-cols-10 gap-6">
               <FiCheckCircle
                 className={
                   isActiveOrganization
@@ -360,6 +380,32 @@ export default function Section06() {
             Get Started
           </button>
         </div>
+      </div>
+      <div className="flex lg:hidden justify-center items-center gap-2 ">
+        <button
+          className={
+            isActiveFree
+              ? "h-4 w-4 rounded-full bg-[#043873]"
+              : "h-3 w-3 rounded-full bg-[#4F9CF9]"
+          }
+          onClick={eventHandlerFree}
+        ></button>
+        <button
+          className={
+            isActivePersonal
+              ? "h-4 w-4 rounded-full bg-[#043873]"
+              : "h-3 w-3 rounded-full bg-[#4F9CF9]"
+          }
+          onClick={eventHandlerPersonal}
+        ></button>
+        <button
+          className={
+            isActiveOrganization
+              ? "h-4 w-4 rounded-full bg-[#043873]"
+              : "h-3 w-3 rounded-full bg-[#4F9CF9]"
+          }
+          onClick={eventHandlerOrganization}
+        ></button>
       </div>
     </div>
   );
