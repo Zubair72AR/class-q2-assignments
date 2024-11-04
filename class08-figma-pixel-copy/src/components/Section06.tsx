@@ -41,7 +41,7 @@ export default function Section06() {
         <div
           className={
             isActiveFree
-              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-105 hover:scale-[103%] transition-all"
+              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
               : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
           }
           onClick={eventHandlerFree}
@@ -139,7 +139,7 @@ export default function Section06() {
             className={
               isActiveFree
                 ? "font-semibold px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] border-[3px] border-transparent hover:bg-[#A7CEFC] hover:text-[#043873]"
-                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#A7CEFC] hover:text-[#043873]"
+                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#043873] hover:text-white hover:border-[#346cb4]"
             }
             onClick={eventHandlerFree}
           >
@@ -149,7 +149,7 @@ export default function Section06() {
         <div
           className={
             isActivePersonal
-              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-105 hover:scale-[103%] transition-all"
+              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
               : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
           }
           onClick={eventHandlerPersonal}
@@ -245,7 +245,7 @@ export default function Section06() {
             className={
               isActivePersonal
                 ? "font-semibold px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] border-[3px] border-transparent hover:bg-[#A7CEFC] hover:text-[#043873]"
-                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#A7CEFC] hover:text-[#043873]"
+                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#043873] hover:text-white hover:border-[#346cb4]"
             }
             onClick={eventHandlerPersonal}
           >
@@ -255,7 +255,7 @@ export default function Section06() {
         <div
           className={
             isActiveOrganization
-              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-105 hover:scale-[103%] transition-all"
+              ? "bg-[#043873] px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#346cb4] max-w-[400px] flex flex-col justify-start items-start gap-6 text-white shadow-lg scale-[103%] hover:scale-[103%] transition-all"
               : "bg-white px-6 lg:px-8 py-10 rounded-xl border-[3px] border-[#FFE492] max-w-[400px] flex flex-col justify-start items-start gap-6 text-[#212529] shadow-lg hover:scale-[103%] transition-all"
           }
           onClick={eventHandlerOrganization}
@@ -353,7 +353,7 @@ export default function Section06() {
             className={
               isActiveOrganization
                 ? "font-semibold px-5 py-[10px] rounded-lg shadow-md text-white bg-[#4F9CF9] border-[3px] border-transparent hover:bg-[#A7CEFC] hover:text-[#043873]"
-                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#A7CEFC] hover:text-[#043873]"
+                : "font-semibold px-5 py-[10px] rounded-lg shadow-md text-[#212529] bg-white border-[3px] border-[#FFE492] hover:bg-[#043873] hover:text-white hover:border-[#346cb4]"
             }
             onClick={eventHandlerOrganization}
           >

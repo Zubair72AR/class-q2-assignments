@@ -67,8 +67,8 @@ export default function Navbar() {
         "xs:items-center",
         "gap-4",
         "absolute",
-        "sm:top-[220px]",
-        "top-[200px]",
+        "sm:top-[260px]",
+        "top-[230px]",
         "left-0",
         "p-10",
         "md:relative",
@@ -100,8 +100,10 @@ export default function Navbar() {
         "top-[52px]",
         "md:top-[72px]",
         "left-0",
-        "p-10",
-        "pb-40",
+        "py-10",
+        "pb-44",
+        "border-b-4",
+        "border-[#FFE492]",
         "md:pb-16",
         "w-full",
         "bg-[#043873]",
@@ -112,9 +114,10 @@ export default function Navbar() {
         "lg:w-auto",
         "lg:top-[0px]",
         "lg:left-0",
-        "lg:p-0",
+        "lg:py-0",
         "lg:bg-none",
         "lg:pb-0",
+        "lg:border-none",
       ];
     }
     return menuClassName.join(" ");
@@ -143,8 +146,8 @@ export default function Navbar() {
                   href={nav.path}
                   className={
                     isActive(nav.path)
-                      ? "flex justify-start items-center text-[#A7CEFC] py-1 lg:py-0 hover:text-[#4F9CF9]"
-                      : "flex justify-start items-center text-white py-1 lg:py-0 hover:text-[#4F9CF9]"
+                      ? "flex justify-start items-center text-white lg:text-[#4F9CF9] bg-[hsl(212,93%,19%)] lg:bg-[#043873] py-2 lg:py-0 px-12 lg:px-0 hover:text-white hover:bg-[hsl(212,93%,30%)] hover:lg:bg-[#043873] hover:lg:text-[#FFE492]"
+                      : "flex justify-start items-center text-white py-2 lg:py-0 px-12 lg:px-0 hover:text-white hover:bg-[hsl(212,93%,30%)] hover:lg:bg-[#043873] hover:lg:bg-[#043873] hover:lg:text-[#FFE492]"
                   }
                 >
                   {nav.name}
