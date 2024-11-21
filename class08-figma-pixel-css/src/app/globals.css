@@ -1,3 +1,172 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Button styles */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  background-color: #4f9cf9;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #a7cefc;
+  color: #043873;
+}
+
+/* Heading Setup */
+.heading {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.25;
+}
+
+.heading.large {
+  font-size: 54px;
+}
+
+.heading.xlarge {
+  font-size: 64px;
+}
+
+/* Media Query settings */
+@media (min-width: 768px) {
+  .heading {
+    font-size: 54px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 64px;
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #043873;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  width: 26px;
+}
+
+.logo-text {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-open-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-closed-links {
+  display: none;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: hsl(212, 93%, 30%);
+  color: #fff;
+}
+
+.nav-link.active {
+  background-color: #043873;
+  color: #4f9cf9;
+}
+
+.dropdown-icon {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.menu-open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-closed {
+  display: none;
+}
+
+.login-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #ffe492;
+  color: #043873;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #ffe492a3;
+}
+
+.menu-toggle {
+  font-size: 32px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-right {
+    display: none;
+  }
+
+  .menu-open {
+    display: block;
+  }
+
+  .menu-closed {
+    display: block;
+  }
+}
