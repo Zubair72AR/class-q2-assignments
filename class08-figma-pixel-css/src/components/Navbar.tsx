@@ -147,7 +147,7 @@ export default function Navbar() {
                   className={
                     isActive(nav.path)
                       ? "flex justify-start items-center text-white lg:text-[#4F9CF9] bg-[hsl(212,93%,19%)] lg:bg-[#043873] py-2 lg:py-0 px-12 lg:px-0 hover:text-white hover:bg-[hsl(212,93%,30%)] hover:lg:bg-[#043873] hover:lg:text-[#FFE492]"
-                      : "flex justify-start items-center text-white py-2 lg:py-0 px-12 lg:px-0 hover:text-white hover:bg-[hsl(212,93%,30%)] hover:lg:bg-[#043873] hover:lg:bg-[#043873] hover:lg:text-[#FFE492]"
+                      : "flex justify-start items-center text-white py-2 lg:py-0 px-12 lg:px-0 hover:text-white hover:bg-[hsl(212,93%,30%)] hover:lg:bg-[#043873] hover:lg:text-[#FFE492]"
                   }
                 >
                   {nav.name}
