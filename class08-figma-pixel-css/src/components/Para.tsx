@@ -1,13 +1,13 @@
 export default function Para({
   paraText,
-  paraClass = "text-white",
+  paraClass = "paragraph",
 }: {
   paraText: string;
   paraClass: string;
 }) {
   return (
     <>
-      <h1 className={`text-lg font-normal ${paraClass}`}>{paraText}</h1>
+      <h1 className={`${paraClass}`}>{paraText}</h1>
     </>
   );
 }

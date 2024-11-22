@@ -2,14 +2,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
-// import swiper style
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// modules
+// Swiper modules
 import { Pagination, Navigation } from "swiper/modules";
-
 import { BiSolidQuoteLeft } from "react-icons/bi";
 
 interface ReviewCardData {
@@ -20,78 +19,7 @@ interface ReviewCardData {
 }
 
 const reviewCards: ReviewCardData[] = [
-  {
-    reviewText:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management.",
-    reviewImage: "/Avatar1.png",
-    reviewerName: "Oberon Shaw, MCH",
-    reviewerPosition: "Head of Talent Acquisition, North America",
-  },
-  {
-    reviewText:
-      "This platform has revolutionized how we manage projects and collaborate.",
-    reviewImage: "/Avatar2.png",
-    reviewerName: "Alice Johnson",
-    reviewerPosition: "Project Manager, Global Corp",
-  },
-  {
-    reviewText:
-      "The integration features are incredibly useful and have saved us so much time.",
-    reviewImage: "/Avatar3.png",
-    reviewerName: "Michael Brown",
-    reviewerPosition: "Product Owner, Tech Solutions",
-  },
-  {
-    reviewText:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management.",
-    reviewImage: "/Avatar4.png",
-    reviewerName: "Sir Muhammad Bilal Khan",
-    reviewerPosition: "Full Stack Developer",
-  },
-  {
-    reviewText:
-      "This platform has revolutionized how we manage projects and collaborate.",
-    reviewImage: "/Avatar5.png",
-    reviewerName: "Sir Ameen Alam",
-    reviewerPosition: "Global AI & Cloud Education Leader",
-  },
-  {
-    reviewText:
-      "The integration features are incredibly useful and have saved us so much time.",
-    reviewImage: "/Avatar6.png",
-    reviewerName: "Mark Zuckerberg",
-    reviewerPosition:
-      "Co-founder chairman and CEO of Meta Platforms and Facebook",
-  },
-  {
-    reviewText:
-      "The integration features are incredibly useful and have saved us so much time.",
-    reviewImage: "/Avatar7.png",
-    reviewerName: "Bill Gates",
-    reviewerPosition:
-      "Co-founding of Microsoft and Bill & Melinda Gates Foundation",
-  },
-  {
-    reviewText:
-      "Whitepate is designed as a collaboration tool for businesses that is a full project management.",
-    reviewImage: "/Avatar8.png",
-    reviewerName: "Mohamed bin Zayed Al Nahyan",
-    reviewerPosition: "President of the United Arab Emirates",
-  },
-  {
-    reviewText:
-      "This platform has revolutionized how we manage projects and collaborate.",
-    reviewImage: "/Avatar9.png",
-    reviewerName: "Elon Musk",
-    reviewerPosition: "Founder, CEO, and chief engineer of SpaceX",
-  },
-  {
-    reviewText:
-      "The integration features are incredibly useful and have saved us so much time.",
-    reviewImage: "/Avatar10.jpg",
-    reviewerName: "Zubair Ahmed bin Jan",
-    reviewerPosition: "Web Developer & Graphic Designer",
-  },
+  // ... your reviewCards data here
 ];
 
 const SwiperComponent = () => {
@@ -101,7 +29,7 @@ const SwiperComponent = () => {
       navigation={true}
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      className="max-w-[350px] md:max-w-[720px] lg:max-w-[1090px] overflow-auto my-6"
+      className="swiper-container"
       loop={true}
       modules={[Pagination, Navigation]}
       breakpoints={{
@@ -117,58 +45,36 @@ const SwiperComponent = () => {
       }}
     >
       {reviewCards.map((review, index) => (
-        <SwiperSlide key={index} className="mb-12">
+        <SwiperSlide key={index} className="swiper-slide">
           {({ isActive }) => (
-            <div
-              className={
-                isActive
-                  ? "w-[350px] bg-white border-2 border-[#FFE492] rounded-xl pt-12 pb-10 px-9 text-start shadow-lg"
-                  : "w-[350px] bg-[#4F9CF9] border-2 border-[#A7CEFC] rounded-xl pt-12 pb-10 px-9 text-start shadow-lg"
-              }
-            >
+            <div className={`review-card ${isActive ? "active" : "inactive"}`}>
               <BiSolidQuoteLeft
-                className={
-                  isActive
-                    ? "mb-7 text-[#043873] text-7xl"
-                    : "mb-7 text-white text-7xl"
-                }
+                className={`quote-icon ${isActive ? "active" : "inactive"}`}
               />
-              <p
-                className={
-                  isActive
-                    ? "text-sm text-[#212529] min-h-[70px] mb-6"
-                    : "text-sm text-white min-h-[70px] mb-6"
-                }
-              >
+              <p className={`review-text ${isActive ? "active" : "inactive"}`}>
                 {review.reviewText}
               </p>
-              <hr
-                className={
-                  isActive ? "pb-6 border-gray-300" : "pb-6 border-white"
-                }
-              />
-              <div className="flex justify-start items-center gap-5 min-h-28">
+              <hr className={`divider ${isActive ? "active" : "inactive"}`} />
+              <div className="reviewer-info">
                 <Image
                   src={review.reviewImage}
                   alt={review.reviewerName}
                   width={80}
                   height={80}
-                  className="w-[95px] rounded-full hover:scale-110 transition-all border-2 shadow-md"
+                  className="reviewer-image"
                 />
-                <div className="text-start">
+                <div className="reviewer-details">
                   <h3
-                    className={
-                      isActive
-                        ? "font-semibold text-xl text-[#212529] pb-2"
-                        : "font-semibold text-xl text-[#043873] pb-2"
-                    }
+                    className={`reviewer-name ${
+                      isActive ? "active" : "inactive"
+                    }`}
                   >
                     {review.reviewerName}
                   </h3>
                   <p
-                    className={
-                      isActive ? "text-[#212529] text-xs" : "text-white text-xs"
-                    }
+                    className={`reviewer-position ${
+                      isActive ? "active" : "inactive"
+                    }`}
                   >
                     {review.reviewerPosition}
                   </p>

@@ -1,9 +1,10 @@
 import React from "react";
+import "./Products.css"; // Import the CSS file for styling
 
 export default function Products() {
   return (
-    <div className="flex justify-center items-center h-full">
-      <h1 className="text-3xl font-bold py-96">Products Page</h1>
+    <div className="products-container">
+      <h1 className="products-title">Products Page</h1>
     </div>
   );
 }

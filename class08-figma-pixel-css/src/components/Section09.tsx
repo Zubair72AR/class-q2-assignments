@@ -8,32 +8,13 @@ import Logo_Slack from "../../public/Logo_Slack.svg";
 
 export default function Section09() {
   return (
-    <div className="text-center flex flex-col gap-20 bg-white py-12 md:py-24 px-4 md:px-6 xl:px-8 2xl:px-44">
-      <HeadingBr
-        headText="Our sponsors"
-        headClass="text-[#212529] bg-[url('../../public/Shape.svg')] bg-no-repeat bg-[center_110%]"
-      />
-      <div className="flex justify-between items-center gap-20 lg:gap-0 lg:flex-row flex-col">
-        <Image
-          src={Logo_Apple}
-          alt="Logo_Apple"
-          className="h-14 md:h-16 w-auto"
-        />
-        <Image
-          src={Logo_Microsoft}
-          alt="Logo_Microsoft"
-          className="h-14 md:h-16 w-auto"
-        />
-        <Image
-          src={Logo_Slack}
-          alt="Logo_Slack"
-          className="h-14 md:h-16 w-auto"
-        />
-        <Image
-          src={Logo_Google}
-          alt="Logo_Google"
-          className="h-14 md:h-16 w-auto"
-        />
+    <div className="section09-container">
+      <HeadingBr headText="Our sponsors" headClass="heading" />
+      <div className="sponsor-logos">
+        <Image src={Logo_Apple} alt="Logo_Apple" className="logo" />
+        <Image src={Logo_Microsoft} alt="Logo_Microsoft" className="logo" />
+        <Image src={Logo_Slack} alt="Logo_Slack" className="logo" />
+        <Image src={Logo_Google} alt="Logo_Google" className="logo" />
       </div>
     </div>
   );
